@@ -3,12 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://dea.gl/posts/2020/08/a-hands-on-explanation-of-tls/ssl-certificates/</loc>
+    <loc>https://dea.gl/</loc>
     <lastmod>2020-08-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dea.gl/</loc>
+    <loc>https://dea.gl/posts/2020/08/hands-on-with-tls/ssl-certificates/</loc>
     <lastmod>2020-08-18T00:00:00+00:00</lastmod>
   </url>
   
@@ -43,7 +43,7 @@
   </url>
   
   <url>
-    <loc>https://dea.gl/posts/2020/08/an-overview-of-https/</loc>
+    <loc>https://dea.gl/posts/2020/08/an-overview-of-the-https-protocol/</loc>
     <lastmod>2020-08-14T00:00:00+00:00</lastmod>
   </url>
   
@@ -70,15 +70,6 @@
   <url>
     <loc>https://dea.gl/posts/2020/08/tls/ssl-certificates/</loc>
     <lastmod>2020-08-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://dea.gl/posts/2020/08/virtual-private-networks/</loc>
-    <lastmod>2020-08-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://dea.gl/posts/1/01/</loc>
   </url>
   
 </urlset>

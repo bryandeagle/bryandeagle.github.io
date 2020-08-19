@@ -10,11 +10,11 @@
         <atom:link href="https://dea.gl/posts/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
-            <title>A Hands-On Explanation of TLS/SSL Certificates</title>
-            <link>https://dea.gl/posts/2020/08/a-hands-on-explanation-of-tls/ssl-certificates/</link>
+            <title>Hands-On with TLS/SSL Certificates</title>
+            <link>https://dea.gl/posts/2020/08/hands-on-with-tls/ssl-certificates/</link>
             <pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
             
-            <guid>https://dea.gl/posts/2020/08/a-hands-on-explanation-of-tls/ssl-certificates/</guid>
+            <guid>https://dea.gl/posts/2020/08/hands-on-with-tls/ssl-certificates/</guid>
             <description>Introduction In this article, I&amp;rsquo;ll discuss TLS/SSL certificates. To learn more than just the theory, I&amp;rsquo;ll be acting as my own Certificate Authority, which will allow me to generate all the required files for TLS/SSL communication.
 What is SSL/TLS? SSL and TLS are both cryptographic protocols used to increase security by encrypting communication over computer networks. SSL stands for Secure Sockets Layer while TLS stands for Transport Layer Security. TLS is the successor of SSL 3.</description>
             <content type="html"><![CDATA[<h2 id="introduction">Introduction</h2>
@@ -110,11 +110,11 @@ DNS.1 = example.com
         </item>
         
         <item>
-            <title>An Overview of HTTPS</title>
-            <link>https://dea.gl/posts/2020/08/an-overview-of-https/</link>
+            <title>An Overview of the HTTPS Protocol</title>
+            <link>https://dea.gl/posts/2020/08/an-overview-of-the-https-protocol/</link>
             <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate>
             
-            <guid>https://dea.gl/posts/2020/08/an-overview-of-https/</guid>
+            <guid>https://dea.gl/posts/2020/08/an-overview-of-the-https-protocol/</guid>
             <description>How HTTPS Works Type facebook.com into your web browser, and you&amp;rsquo;ll see a little lock appear to the left of the URL. That lock means you are using HTTPS and signifies that your connection to facebook.com is secure.
 Using HTTPS over the older, not secure, HTTP has two benefits:
  The website your browser is talking to has proven itself to be facebook.com and is not just pretending to be. The communications your browser sends to the website are encrypted so that no-one except your browser and the website can read them.</description>
@@ -174,39 +174,6 @@ Response Headers:
             <guid>https://dea.gl/posts/2020/08/tls/ssl-certificates/</guid>
             <description></description>
             <content type="html"><![CDATA[]]></content>
-        </item>
-        
-        <item>
-            <title>Virtual Private Networks</title>
-            <link>https://dea.gl/posts/2020/08/virtual-private-networks/</link>
-            <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate>
-            
-            <guid>https://dea.gl/posts/2020/08/virtual-private-networks/</guid>
-            <description></description>
-            <content type="html"><![CDATA[]]></content>
-        </item>
-        
-        <item>
-            <title></title>
-            <link>https://dea.gl/posts/1/01/</link>
-            <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-            
-            <guid>https://dea.gl/posts/1/01/</guid>
-            <description>Setting up a Man-in-the-Middle Getting a raspberry pi together Download the Raspberry Pi image from the official site
-Securing the Raspberry pi Follow this article to secure your raspberry pi.
-If you&amp;rsquo;ve installed ufw, you&amp;rsquo;ll want to allow HTTP and HTTPS.
-ufw allow HTTPufw allow HTTPSInstalling MITM Proxy apt install mitmproxy</description>
-            <content type="html"><![CDATA[<h1 id="setting-up-a-man-in-the-middle">Setting up a Man-in-the-Middle</h1>
-<h2 id="getting-a-raspberry-pi-together">Getting a raspberry pi together</h2>
-<p>Download the Raspberry Pi image from <a href="https://www.raspberrypi.org/downloads/">the official site</a></p>
-<h2 id="securing-the-raspberry-pi">Securing the Raspberry pi</h2>
-<p>Follow <a href="https://www.raspberrypi.org/documentation/configuration/security.md">this article</a> to secure your raspberry pi.</p>
-<p>If you&rsquo;ve installed ufw, you&rsquo;ll want to allow HTTP and HTTPS.</p>
-<pre><code>ufw allow HTTP
-ufw allow HTTPS
-</code></pre><h2 id="installing-mitm-proxy">Installing MITM Proxy</h2>
-<pre><code>apt install mitmproxy
-</code></pre>]]></content>
         </item>
         
     </channel>

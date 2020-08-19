@@ -13,11 +13,11 @@
     
     
     <item>
-      <title>An Overview of HTTPS</title>
-      <link>https://dea.gl/posts/2020/08/an-overview-of-https/</link>
+      <title>An Overview of the HTTPS Protocol</title>
+      <link>https://dea.gl/posts/2020/08/an-overview-of-the-https-protocol/</link>
       <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://dea.gl/posts/2020/08/an-overview-of-https/</guid>
+      <guid>https://dea.gl/posts/2020/08/an-overview-of-the-https-protocol/</guid>
       <description>How HTTPS Works Type facebook.com into your web browser, and you&amp;rsquo;ll see a little lock appear to the left of the URL. That lock means you are using HTTPS and signifies that your connection to facebook.com is secure.
 Using HTTPS over the older, not secure, HTTP has two benefits:
  The website your browser is talking to has proven itself to be facebook.com and is not just pretending to be. The communications your browser sends to the website are encrypted so that no-one except your browser and the website can read them.</description>
@@ -29,15 +29,6 @@ Using HTTPS over the older, not secure, HTTP has two benefits:
       <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://dea.gl/posts/2020/08/tls/ssl-certificates/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Virtual Private Networks</title>
-      <link>https://dea.gl/posts/2020/08/virtual-private-networks/</link>
-      <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://dea.gl/posts/2020/08/virtual-private-networks/</guid>
       <description></description>
     </item>
     
