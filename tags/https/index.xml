@@ -24,16 +24,6 @@ Using HTTPS over the older, not secure, HTTP has two benefits:
     </item>
     
     <item>
-      <title>Learning About TLS/SSL Certificates Hands-On</title>
-      <link>https://dea.gl/posts/2020/08/learning-about-tls/ssl-certificates-hands-on/</link>
-      <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://dea.gl/posts/2020/08/learning-about-tls/ssl-certificates-hands-on/</guid>
-      <description>Introduction In this article I&amp;rsquo;ll discuss TLS/SSL certificates. In order to learn more than just the theory, I&amp;rsquo;ll actually be acting as my own Certificate Authority, which will allow me to generate all the required files for TLS/SSL communication on my own.
-What is SSL/TLS? SSL and TLS are both cryptographic protocols used to increase security by encrypting communication over computer networks. SSL stands for Secure Sockets Layer while TLS stands for Transport Layer Security.</description>
-    </item>
-    
-    <item>
       <title>TLS/SSL Certificates</title>
       <link>https://dea.gl/posts/2020/08/tls/ssl-certificates/</link>
       <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate>
