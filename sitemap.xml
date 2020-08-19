@@ -3,6 +3,41 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://dea.gl/posts/2020/08/a-hands-on-explanation-of-tls/ssl-certificates/</loc>
+    <lastmod>2020-08-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dea.gl/</loc>
+    <lastmod>2020-08-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dea.gl/tags/https/</loc>
+    <lastmod>2020-08-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dea.gl/tags/personal/</loc>
+    <lastmod>2020-08-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dea.gl/posts/</loc>
+    <lastmod>2020-08-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dea.gl/tags/</loc>
+    <lastmod>2020-08-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dea.gl/tags/web/</loc>
+    <lastmod>2020-08-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://dea.gl/about/</loc>
     <lastmod>2020-08-14T00:00:00+00:00</lastmod>
   </url>
@@ -13,17 +48,7 @@
   </url>
   
   <url>
-    <loc>https://dea.gl/</loc>
-    <lastmod>2020-08-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://dea.gl/categories/</loc>
-    <lastmod>2020-08-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://dea.gl/tags/https/</loc>
     <lastmod>2020-08-14T00:00:00+00:00</lastmod>
   </url>
   
@@ -33,22 +58,7 @@
   </url>
   
   <url>
-    <loc>https://dea.gl/tags/personal/</loc>
-    <lastmod>2020-08-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://dea.gl/posts/</loc>
-    <lastmod>2020-08-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://dea.gl/series/</loc>
-    <lastmod>2020-08-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://dea.gl/tags/</loc>
     <lastmod>2020-08-14T00:00:00+00:00</lastmod>
   </url>
   
@@ -65,15 +75,6 @@
   <url>
     <loc>https://dea.gl/posts/2020/08/virtual-private-networks/</loc>
     <lastmod>2020-08-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://dea.gl/tags/web/</loc>
-    <lastmod>2020-08-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://dea.gl/posts/1/01/</loc>
   </url>
   
   <url>

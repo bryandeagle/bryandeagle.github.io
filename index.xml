@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 14 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 18 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://dea.gl/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>A Hands-On Explanation of TLS/SSL Certificates</title>
+      <link>https://dea.gl/posts/2020/08/a-hands-on-explanation-of-tls/ssl-certificates/</link>
+      <pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://dea.gl/posts/2020/08/a-hands-on-explanation-of-tls/ssl-certificates/</guid>
+      <description>Introduction In this article, I&amp;rsquo;ll discuss TLS/SSL certificates. To learn more than just the theory, I&amp;rsquo;ll be acting as my own Certificate Authority, which will allow me to generate all the required files for TLS/SSL communication.
+What is SSL/TLS? SSL and TLS are both cryptographic protocols used to increase security by encrypting communication over computer networks. SSL stands for Secure Sockets Layer while TLS stands for Transport Layer Security. TLS is the successor of SSL 3.</description>
+    </item>
     
     <item>
       <title>About Me</title>
@@ -61,16 +71,6 @@ Using HTTPS over the older, not secure, HTTP has two benefits:
 Securing the Raspberry pi Follow this article to secure your raspberry pi.
 If you&amp;rsquo;ve installed ufw, you&amp;rsquo;ll want to allow HTTP and HTTPS.
 ufw allow HTTPufw allow HTTPSInstalling MITM Proxy apt install mitmproxy</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://dea.gl/posts/1/01/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://dea.gl/posts/1/01/</guid>
-      <description>Introduction In this article, I&amp;rsquo;ll discuss TLS/SSL certificates. To learn more than just the theory, I&amp;rsquo;ll be acting as my own Certificate Authority, which will allow me to generate all the required files for TLS/SSL communication.
-What is SSL/TLS? SSL and TLS are both cryptographic protocols used to increase security by encrypting communication over computer networks. SSL stands for Secure Sockets Layer while TLS stands for Transport Layer Security. TLS is the successor of SSL 3.</description>
     </item>
     
   </channel>
