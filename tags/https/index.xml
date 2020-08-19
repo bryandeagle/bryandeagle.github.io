@@ -33,14 +33,5 @@ Using HTTPS over the older, not secure, HTTP has two benefits:
  The website your browser is talking to has proven itself to be facebook.com and is not just pretending to be. The communications your browser sends to the website are encrypted so that no-one except your browser and the website can read them.</description>
     </item>
     
-    <item>
-      <title>TLS/SSL Certificates</title>
-      <link>https://dea.gl/posts/2020/08/tls/ssl-certificates/</link>
-      <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://dea.gl/posts/2020/08/tls/ssl-certificates/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>

@@ -166,15 +166,5 @@ Response Headers:
 ]]></content>
         </item>
         
-        <item>
-            <title>TLS/SSL Certificates</title>
-            <link>https://dea.gl/posts/2020/08/tls/ssl-certificates/</link>
-            <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate>
-            
-            <guid>https://dea.gl/posts/2020/08/tls/ssl-certificates/</guid>
-            <description></description>
-            <content type="html"><![CDATA[]]></content>
-        </item>
-        
     </channel>
 </rss>
