@@ -34,12 +34,13 @@ Using HTTPS over the older, not secure, HTTP has two benefits:
     </item>
     
     <item>
-      <title>TLS/SSL Certificates</title>
-      <link>https://dea.gl/posts/2020/08/tls/ssl-certificates/</link>
+      <title>Learning About TLS/SSL Certificates Hands-On</title>
+      <link>https://dea.gl/posts/2020/08/learning-about-tls/ssl-certificates-hands-on/</link>
       <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://dea.gl/posts/2020/08/tls/ssl-certificates/</guid>
-      <description></description>
+      <guid>https://dea.gl/posts/2020/08/learning-about-tls/ssl-certificates-hands-on/</guid>
+      <description>Introduction In this article I&amp;rsquo;ll discuss TLS/SSL certificates. In order to learn more than just the theory, I&amp;rsquo;ll actually be acting as my own Certificate Authority, which will allow me to generate all the required files for TLS/SSL communication on my own.
+What is SSL/TLS? SSL and TLS are both cryptographic protocols used to increase security by encrypting communication over computer networks. SSL stands for Secure Sockets Layer while TLS stands for Transport Layer Security.</description>
     </item>
     
     <item>
@@ -58,6 +59,18 @@ Using HTTPS over the older, not secure, HTTP has two benefits:
       
       <guid>https://dea.gl/posts/2020/08/virtual-private-networks/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://dea.gl/posts/1/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dea.gl/posts/1/01/</guid>
+      <description>Setting up a Man-in-the-Middle Getting a raspberry pi together Download the Raspberry Pi image from the official site
+Securing the Raspberry pi Follow this article to secure your raspberry pi.
+If you&amp;rsquo;ve installed ufw, you&amp;rsquo;ll want to allow HTTP and HTTPS.
+ufw allow HTTPufw allow HTTPSInstalling MITM Proxy apt install mitmproxy</description>
     </item>
     
   </channel>

@@ -67,13 +67,102 @@ Response Headers:
         </item>
         
         <item>
-            <title>TLS/SSL Certificates</title>
-            <link>https://dea.gl/posts/2020/08/tls/ssl-certificates/</link>
+            <title>Learning About TLS/SSL Certificates Hands-On</title>
+            <link>https://dea.gl/posts/2020/08/learning-about-tls/ssl-certificates-hands-on/</link>
             <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate>
             
-            <guid>https://dea.gl/posts/2020/08/tls/ssl-certificates/</guid>
-            <description></description>
-            <content type="html"><![CDATA[]]></content>
+            <guid>https://dea.gl/posts/2020/08/learning-about-tls/ssl-certificates-hands-on/</guid>
+            <description>Introduction In this article I&amp;rsquo;ll discuss TLS/SSL certificates. In order to learn more than just the theory, I&amp;rsquo;ll actually be acting as my own Certificate Authority, which will allow me to generate all the required files for TLS/SSL communication on my own.
+What is SSL/TLS? SSL and TLS are both cryptographic protocols used to increase security by encrypting communication over computer networks. SSL stands for Secure Sockets Layer while TLS stands for Transport Layer Security.</description>
+            <content type="html"><![CDATA[<h2 id="introduction">Introduction</h2>
+<p>In this article I&rsquo;ll discuss TLS/SSL certificates. In order to learn more than just the theory, I&rsquo;ll actually be acting as my own Certificate Authority, which will allow me to generate all the required files for TLS/SSL communication on my own.</p>
+<h2 id="what-is-ssltls">What is SSL/TLS?</h2>
+<p>SSL and TLS are both cryptographic protocols used to increase security by encrypting communication over computer networks. SSL stands for <strong>Secure Sockets Layer</strong> while TLS stands for <strong>Transport Layer Security</strong>. TLS is the successor of SSL 3.0 and is now the standard (although both methods are still commonly referred to as SSL).</p>
+<h2 id="becoming-a-certificate-authority">Becoming a Certificate Authority</h2>
+<h3 id="step-1-generate-a-key">Step 1. Generate a key</h3>
+<pre><code>openssl genrsa -des3 -out ca.key 2048
+</code></pre><p>In this command, we&rsquo;re using the <strong>openssl</strong> tool to generate an rsa key (<strong>genrsa</strong>). With the <strong>-des3</strong> option, we&rsquo;re using the <a href="https://en.wikipedia.org/wiki/Triple_DES">triple DES</a> engine to encrypt the key. This requires us to use a password any time we want to use this key, which adds an important layer of security.</p>
+<p>We&rsquo;re telling the openssl tool to generate a key <strong>2048</strong> bits long, and output to the file <strong>ca.key</strong>.</p>
+<h3 id="step-2-generate-a-root-certificate">Step 2. Generate a Root Certificate</h3>
+<pre><code>openssl req -new -x509 -key ca.key -sha256 -days 365000 -out ca.pem
+</code></pre><p>The <strong>openssl req</strong> command creates and processes certificate requests. It can also create self-signed certificates, which is what we&rsquo;re using it for, by giving it the <strong>-new -x509</strong> options.</p>
+<p>We&rsquo;re using the <strong>sha256</strong> digest to sign this certificate with the our previously generated key, <strong>ca.key</strong>.</p>
+<p>We&rsquo;re also making this certificate valid for 1,000 years (365000 days) because it&rsquo;s self-signed, so expiry isn&rsquo;t too important.</p>
+<p>Congratulations! You are now officially a <strong>Certificate Authority</strong>.</p>
+<h2 id="getting-people-to-trust-your-authority">Getting People to Trust Your Authority</h2>
+<p>Being a Certificate Authority doesn&rsquo;t mean much if nobody respects your authority.</p>
+<p>The real Certificate Authorities will join, for example, <a href="https://docs.microsoft.com/en-us/security/trusted-root/program-requirements">Microsoft&rsquo;s Trusted Root Program</a> and have their certificates automatically installed on all Windows distributions.</p>
+<p>Because we&rsquo;re just generating these for personal use, we&rsquo;ll have to manually install them on every device we want to trust us.</p>
+<h3 id="1-installation-on-windows">1. Installation on Windows</h3>
+<ul>
+<li>Double-click on the <strong>certificate.crt</strong> file</li>
+<li>Click on <strong>Install Certificate…</strong> then <strong>Current User</strong></li>
+<li>Select <strong>Place all certificates in the following store</strong></li>
+<li>Browse to <strong>Trusted Root Certificate Authorities</strong></li>
+<li>Click <strong>Next</strong> and then click <strong>Finish</strong></li>
+</ul>
+<h3 id="2-installation-on-android">2. Installation on Android</h3>
+<ul>
+<li>Go to <strong>Settings</strong> » <strong>Security</strong> » <strong>Encryption &amp; credentials</strong></li>
+<li>Go to <strong>Install from stoage</strong> and select the downloaded file</li>
+</ul>
+<h3 id="3-installation-on-macos">3. Installation on MacOS</h3>
+<ul>
+<li>Open the macOS Keychain app, and go to <strong>File &gt; Import Items…</strong></li>
+<li>Select your private key file, then search for the Common Name name</li>
+<li>Double click on your certificate and expand the Trust section</li>
+<li>Change <strong>When using this certificate</strong> to <strong>Always Trust</strong></li>
+</ul>
+<h3 id="4-installation-on-ios">4. Installation on iOS</h3>
+<ul>
+<li>Go to <strong>Settings</strong> and click <strong>Profile Downloaded</strong></li>
+<li>Then click install in the top right</li>
+<li>Go to the main Settings page and select <strong>General</strong> &gt; <strong>About</strong></li>
+<li>Scroll to the bottom and click <strong>Certificate Trust Settings</strong></li>
+<li>Select <strong>Enable Full Trust for Root Certificates</strong></li>
+</ul>
+<h2 id="signing-certificates-as-a-certificate-authority">Signing Certificates as a Certificate Authority</h2>
+<p>For SSL/TLS, web servers need two things:</p>
+<ol>
+<li>A private key, to encrypt traffic</li>
+<li>A certificate, which serves as a public key and as proof the webserver in question really owns the domain.</li>
+</ol>
+<h3 id="step-1-generate-a-private-key">Step 1. Generate a Private Key</h3>
+<p>It&rsquo;s helpful (but not necessary) to name the key, and all files we generate, based on the webserver we&rsquo;re running. In our example, we&rsquo;ll use <em>example.com</em>.</p>
+<pre><code>openssl genrsa -out example.com.key 2048
+</code></pre><p>This time we won&rsquo;t be password-protecting this key with the <strong>-des3</strong> option, like we did with our Root CA key.</p>
+<h3 id="step-2-generate-a-certificate-signing-request">Step 2. Generate a Certificate Signing Request</h3>
+<p>Even though we&rsquo;re the ones signing our own certificate, in the majority of situations a different entity will be signing our certificate, and so the workflow is:</p>
+<ol>
+<li>Generate a certificate signing request</li>
+<li>Fulfill the certificate signing request with our ca private key</li>
+</ol>
+<p>We generate the certificate signing request (csr) with the following command:</p>
+<pre><code>openssl req -new -key example.com.key -out example.com.csr
+</code></pre><p>We&rsquo;ll also need to configure the proper extensions in order for the certificate to work with most protocols. For that we&rsquo;ll create an extension config file, named example.com.ext, with the following contents:</p>
+<pre><code>authorityKeyIdentifier=keyid
+basicConstraints=CA:FALSE
+keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.1 = example.com
+</code></pre><h3 id="step-3-fullfill-the-certificate-signing-request">Step 3. Fullfill the Certificate Signing Request</h3>
+<p>We fulfill our certificate signing process by generating our new certificate, signed with our Root Certificate Authority key.</p>
+<pre><code>openssl x509 -req -in example.com.csr -CA ca.pem -CAkey ca.key -CAcreateserial -out example.com.crt -days 825 -sha256 -extfile example.com.ext
+</code></pre><p>We should now have <strong>example.com.crt</strong> to go along with our <strong>example.com.key</strong> which is all we need to enable TLS/SSL on our website. Below is an example of an Apache configuration which utilizes our newly generated certificate and key.</p>
+<pre><code>&lt;VirtualHost *:80&gt;
+        ServerName example.com
+        ...
+&lt;/VirtualHost&gt;
+
+&lt;VirtualHost *:443&gt;
+        ServerName example.com
+        ...
+        SSLCertificateFile /opt/cert/example.com.crt
+        SSLCertificateKeyFile /opt/cert/example.com.key
+&lt;/VirtualHost&gt;
+</code></pre>]]></content>
         </item>
         
         <item>
@@ -94,6 +183,29 @@ Response Headers:
             <guid>https://dea.gl/posts/2020/08/virtual-private-networks/</guid>
             <description></description>
             <content type="html"><![CDATA[]]></content>
+        </item>
+        
+        <item>
+            <title></title>
+            <link>https://dea.gl/posts/1/01/</link>
+            <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+            
+            <guid>https://dea.gl/posts/1/01/</guid>
+            <description>Setting up a Man-in-the-Middle Getting a raspberry pi together Download the Raspberry Pi image from the official site
+Securing the Raspberry pi Follow this article to secure your raspberry pi.
+If you&amp;rsquo;ve installed ufw, you&amp;rsquo;ll want to allow HTTP and HTTPS.
+ufw allow HTTPufw allow HTTPSInstalling MITM Proxy apt install mitmproxy</description>
+            <content type="html"><![CDATA[<h1 id="setting-up-a-man-in-the-middle">Setting up a Man-in-the-Middle</h1>
+<h2 id="getting-a-raspberry-pi-together">Getting a raspberry pi together</h2>
+<p>Download the Raspberry Pi image from <a href="https://www.raspberrypi.org/downloads/">the official site</a></p>
+<h2 id="securing-the-raspberry-pi">Securing the Raspberry pi</h2>
+<p>Follow <a href="https://www.raspberrypi.org/documentation/configuration/security.md">this article</a> to secure your raspberry pi.</p>
+<p>If you&rsquo;ve installed ufw, you&rsquo;ll want to allow HTTP and HTTPS.</p>
+<pre><code>ufw allow HTTP
+ufw allow HTTPS
+</code></pre><h2 id="installing-mitm-proxy">Installing MITM Proxy</h2>
+<pre><code>apt install mitmproxy
+</code></pre>]]></content>
         </item>
         
     </channel>

@@ -33,6 +33,11 @@
   </url>
   
   <url>
+    <loc>https://dea.gl/posts/2020/08/learning-about-tls/ssl-certificates-hands-on/</loc>
+    <lastmod>2020-08-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://dea.gl/tags/personal/</loc>
     <lastmod>2020-08-14T00:00:00+00:00</lastmod>
   </url>
@@ -63,11 +68,6 @@
   </url>
   
   <url>
-    <loc>https://dea.gl/posts/2020/08/tls/ssl-certificates/</loc>
-    <lastmod>2020-08-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://dea.gl/posts/2020/08/virtual-private-networks/</loc>
     <lastmod>2020-08-14T00:00:00+00:00</lastmod>
   </url>
@@ -75,6 +75,10 @@
   <url>
     <loc>https://dea.gl/tags/web/</loc>
     <lastmod>2020-08-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dea.gl/posts/1/01/</loc>
   </url>
   
 </urlset>
