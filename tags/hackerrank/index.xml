@@ -13,116 +13,117 @@
     
     
     <item>
-      <title>Hackerrank: Athlete Sort</title>
-      <link>https://dea.gl/posts/2020/09/hackerrank-athlete-sort/</link>
+      <title>Hackerrank Python: Athlete Sort</title>
+      <link>https://dea.gl/posts/hackerrank-python-athlete-sort/</link>
       <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://dea.gl/posts/2020/09/hackerrank-athlete-sort/</guid>
+      <guid>https://dea.gl/posts/hackerrank-python-athlete-sort/</guid>
       <description>Problem You are given a spreadsheet that contains a list of N athletes and their details (such as age, height, weight and so on). You are required to sort the data based on the Kth attribute and print the final resulting table. Follow the example given below for better understanding.
 Note that K is indexed from 0 to M-1, where M is the number of attributes.
 Note: If two attributes are the same for different rows, for example, if two atheletes are of the same age, print the row that appeared first in the input.</description>
     </item>
     
     <item>
-      <title>Hackerrank: Company Logo</title>
-      <link>https://dea.gl/posts/2020/09/hackerrank-company-logo/</link>
+      <title>Hackerrank Python: Company Logo</title>
+      <link>https://dea.gl/posts/hackerrank-python-company-logo/</link>
       <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://dea.gl/posts/2020/09/hackerrank-company-logo/</guid>
+      <guid>https://dea.gl/posts/hackerrank-python-company-logo/</guid>
       <description>Problem A newly opened multinational brand has decided to base their company logo on the three most common characters in the company name. They are now trying out various combinations of company names and logos based on this condition. Given a string , which is the company name in lowercase letters, your task is to find the top three most common characters in the string.
  Print the three most common characters along with their occurrence count.</description>
     </item>
     
     <item>
-      <title>Hackerrank: Compress the String!</title>
-      <link>https://dea.gl/posts/2020/09/hackerrank-compress-the-string/</link>
+      <title>Hackerrank Python: Compress the String!</title>
+      <link>https://dea.gl/posts/hackerrank-python-compress-the-string/</link>
       <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://dea.gl/posts/2020/09/hackerrank-compress-the-string/</guid>
+      <guid>https://dea.gl/posts/hackerrank-python-compress-the-string/</guid>
       <description>Problem In this task, we would like for you to appreciate the usefulness of the groupby() function of itertools . To read more about this function, Check this out .
 You are given a string S. Suppose a character &amp;lsquo;c&amp;rsquo; occurs consecutively X times in the string. Replace these consecutive occurrences of the character &amp;lsquo;c&amp;rsquo; with (X, c) in the string.
 For a better understanding of the problem, check the explanation.</description>
     </item>
     
     <item>
-      <title>Hackerrank: Dealing with Complex Numbers</title>
-      <link>https://dea.gl/posts/2020/09/hackerrank-dealing-with-complex-numbers/</link>
+      <title>Hackerrank Python: Dealing with Complex Numbers</title>
+      <link>https://dea.gl/posts/hackerrank-python-dealing-with-complex-numbers/</link>
       <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://dea.gl/posts/2020/09/hackerrank-dealing-with-complex-numbers/</guid>
+      <guid>https://dea.gl/posts/hackerrank-python-dealing-with-complex-numbers/</guid>
       <description>Problem For this challenge, you are given two complex numbers, and you have to print the result of their addition, subtraction, multiplication, division and modulus operations.
 The real and imaginary precision part should be correct up to two decimal places.
-Solution import mathclass Complex(object):def __init__(self, real, imaginary):self.n = complex(real, imaginary)self.real = realself.imaginary = imaginarydef __add__(self, no):res = self.n + no.nreturn Complex(res.real, res.imag)def __sub__(self, no):res = self.</description>
+Solution import math class Complex(object): def __init__(self, real, imaginary): self.n = complex(real, imaginary) self.real = real self.imaginary = imaginary def __add__(self, no): res = self.n + no.n return Complex(res.real, res.imag) def __sub__(self, no): res = self.</description>
     </item>
     
     <item>
-      <title>Hackerrank: Default Arguments</title>
-      <link>https://dea.gl/posts/2020/09/hackerrank-default-arguments/</link>
+      <title>Hackerrank Python: Default Arguments</title>
+      <link>https://dea.gl/posts/hackerrank-python-default-arguments/</link>
       <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://dea.gl/posts/2020/09/hackerrank-default-arguments/</guid>
+      <guid>https://dea.gl/posts/hackerrank-python-default-arguments/</guid>
       <description>Problem In this challenge, the task is to debug the existing code to successfully execute all provided test files.
 Python supports a useful concept of default argument values. For each keyword argument of a function, we can assign a default value which is going to be used as the value of said argument if the function is called without it. For example, consider the following increment function:
-def increment_by(n, increment=1):return n + incrementThe functions works like this:</description>
+def increment_by(n, increment=1): return n + increment The functions works like this:</description>
     </item>
     
     <item>
-      <title>Hackerrank: Find Angle MBC</title>
-      <link>https://dea.gl/posts/2020/09/hackerrank-find-angle-mbc/</link>
+      <title>Hackerrank Python: Find Angle MBC</title>
+      <link>https://dea.gl/posts/hackerrank-python-find-angle-mbc/</link>
       <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://dea.gl/posts/2020/09/hackerrank-find-angle-mbc/</guid>
+      <guid>https://dea.gl/posts/hackerrank-python-find-angle-mbc/</guid>
       <description>Problem ABC is a right triangle, 90° at B. Therefore, ∠ABC = 90°.
 Point M is the midpoint of hypotenuse AC.
 You are given the lengths AB and BC.
 Your task is to find ∠MBC (angle θ°, as shown in the figure) in degrees.
-Solution import cmathimport mathi = int(input())r = int(input())a = complex(r, i)print(&#39;{:.0f}°&#39;.format(round(math.degrees(cmath.phase(a)),0)))</description>
+Solution import cmath import math i = int(input()) r = int(input()) a = complex(r, i) print(&amp;#39;{:.0f}°&amp;#39;.format(round(math.degrees(cmath.phase(a)),0))) </description>
     </item>
     
     <item>
-      <title>Hackerrank: ginortS</title>
-      <link>https://dea.gl/posts/2020/09/hackerrank-ginorts/</link>
+      <title>Hackerrank Python: ginortS</title>
+      <link>https://dea.gl/posts/hackerrank-python-ginorts/</link>
       <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://dea.gl/posts/2020/09/hackerrank-ginorts/</guid>
+      <guid>https://dea.gl/posts/hackerrank-python-ginorts/</guid>
       <description>Problem You are given a string S. S contains alphanumeric characters only.
 Your task is to sort the string in the following manner:
- All sorted lowercase letters are ahead of uppercase letters. All sorted uppercase letters are ahead of digits. All sorted odd digits are ahead of sorted even digits.  Solution print(&#39;&#39;.join(sorted(input(), key=lambda i:&#39;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ 1357902468&#39;.find(i))))</description>
+ All sorted lowercase letters are ahead of uppercase letters. All sorted uppercase letters are ahead of digits. All sorted odd digits are ahead of sorted even digits.  Solution print(&amp;#39;&amp;#39;.join(sorted(input(), key=lambda i:&amp;#39;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ 1357902468&amp;#39;.find(i)))) </description>
     </item>
     
     <item>
-      <title>Hackerrank: Iterables and Iterators</title>
-      <link>https://dea.gl/posts/2020/09/hackerrank-iterables-and-iterators/</link>
+      <title>Hackerrank Python: Iterables and Iterators</title>
+      <link>https://dea.gl/posts/hackerrank-python-iterables-and-iterators/</link>
       <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://dea.gl/posts/2020/09/hackerrank-iterables-and-iterators/</guid>
+      <guid>https://dea.gl/posts/hackerrank-python-iterables-and-iterators/</guid>
       <description>Problem The itertools module standardizes a core set of fast, memory efficient tools that are useful by themselves or in combination. Together, they form an iterator algebra making it possible to construct specialized tools succinctly and efficiently in pure Python.
 To read more about the functions in this module, check out their documentation here.
 You are given a list of N lowercase English letters. For a given integer K, you can select any K indices (assume 1-based indexing) with a uniform probability from the list.</description>
     </item>
     
     <item>
-      <title>Hackerrank: Maximize It!</title>
-      <link>https://dea.gl/posts/2020/09/hackerrank-maximize-it/</link>
+      <title>Hackerrank Python: Maximize It!</title>
+      <link>https://dea.gl/posts/hackerrank-python-maximize-it/</link>
       <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://dea.gl/posts/2020/09/hackerrank-maximize-it/</guid>
-      <description>Problem You are given a function f(X) = X^2. You are also given K lists. The ith list consists of N_i elements.
+      <guid>https://dea.gl/posts/hackerrank-python-maximize-it/</guid>
+      <description>Problem You are given a function f(X) = X2. You are also given K lists. The ith list consists of Nielements.
 You have to pick one element from each list so that the value from the equation below is maximized:
-S = (f(X_1) + f(X_2) + &amp;hellip; + f(X_k)) % M
-X_i denotes the element picked from the ith list. Find the maximized value S_max obtained.
-% denotes the modulo operator.</description>
+S = (f(X1) + f(X2) + &amp;hellip; + f(Xk)) % M
+Xidenotes the element picked from the ith list. Find the maximized value Smaxobtained.
+% denotes the modulo operator.
+Note that you need to take exactly one element from each list, not necessarily the largest element.</description>
     </item>
     
     <item>
-      <title>Hackerrank: Merge the Tools!</title>
-      <link>https://dea.gl/posts/2020/09/hackerrank-merge-the-tools/</link>
+      <title>Hackerrank Python: Merge the Tools!</title>
+      <link>https://dea.gl/posts/hackerrank-python-merge-the-tools/</link>
       <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://dea.gl/posts/2020/09/hackerrank-merge-the-tools/</guid>
+      <guid>https://dea.gl/posts/hackerrank-python-merge-the-tools/</guid>
       <description>Problem Consider the following:
- A string, s, of length n where s=c0c1&amp;hellip;cn-1. An integer, k, where k is a factor of n.  We can split s into n/k subsegments where each subsegment, ti, consists of a contiguous block of k characters in s. Then, use each ti to create string ui such that:
- The characters in ui are a subsequence of the characters in ti. Any repeat occurrence of a character is removed from the string such that each character in ui occurs exactly once.</description>
+ A string, s, of length n where s=c0c1&amp;hellip;cn-1. An integer, k, where k is a factor of n.  We can split s into n/k subsegments where each subsegment, ti, consists of a contiguous block of k characters in s. Then, use each tito create string uisuch that:
+ The characters in uiare a subsequence of the characters in ti. Any repeat occurrence of a character is removed from the string such that each character in uioccurs exactly once.</description>
     </item>
     
   </channel>
