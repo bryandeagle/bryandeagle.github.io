@@ -4,36 +4,156 @@
   
   <url>
     <loc>https://dea.gl/</loc>
-    <lastmod>2020-08-18T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dea.gl/posts/2020/08/hands-on-with-tls/ssl-certificates/</loc>
-    <lastmod>2020-08-18T00:00:00+00:00</lastmod>
+    <loc>https://dea.gl/tags/hackerrank/</loc>
+    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dea.gl/tags/https/</loc>
-    <lastmod>2020-08-18T00:00:00+00:00</lastmod>
+    <loc>https://dea.gl/posts/2020/09/hackerrank-athlete-sort/</loc>
+    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dea.gl/tags/personal/</loc>
-    <lastmod>2020-08-18T00:00:00+00:00</lastmod>
+    <loc>https://dea.gl/posts/2020/09/hackerrank-company-logo/</loc>
+    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dea.gl/posts/2020/09/hackerrank-compress-the-string/</loc>
+    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dea.gl/posts/2020/09/hackerrank-dealing-with-complex-numbers/</loc>
+    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dea.gl/posts/2020/09/hackerrank-default-arguments/</loc>
+    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dea.gl/posts/2020/09/hackerrank-find-angle-mbc/</loc>
+    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dea.gl/posts/2020/09/hackerrank-ginorts/</loc>
+    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dea.gl/posts/2020/09/hackerrank-iterables-and-iterators/</loc>
+    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dea.gl/posts/2020/09/hackerrank-maximize-it/</loc>
+    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dea.gl/posts/2020/09/hackerrank-merge-the-tools/</loc>
+    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dea.gl/posts/2020/09/hackerrank-no-idea/</loc>
+    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dea.gl/posts/2020/09/hackerrank-piling-up/</loc>
+    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dea.gl/posts/2020/09/hackerrank-reduce-function/</loc>
+    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dea.gl/posts/2020/09/hackerrank-regex-substitution/</loc>
+    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dea.gl/posts/2020/09/hackerrank-the-minion-game/</loc>
+    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dea.gl/posts/2020/09/hackerrank-time-delta/</loc>
+    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dea.gl/posts/2020/09/hackerrank-triangle-quest/</loc>
+    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dea.gl/posts/2020/09/hackerrank-triangle-quest-2/</loc>
+    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dea.gl/posts/2020/09/hackerrank-validating-credit-card-numbers/</loc>
+    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dea.gl/posts/2020/09/hackerrank-validating-email-addresses-with-a-filter/</loc>
+    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dea.gl/posts/2020/09/hackerrank-validating-matrix-script/</loc>
+    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dea.gl/posts/2020/09/hackerrank-validating-postal-codes/</loc>
+    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dea.gl/posts/2020/09/hackerrank-word-order/</loc>
+    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dea.gl/posts/2020/09/hackerrank-words-score/</loc>
+    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dea.gl/posts/2020/09/hackerrank-write-a-function/</loc>
+    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://dea.gl/posts/</loc>
-    <lastmod>2020-08-18T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dea.gl/tags/python/</loc>
+    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://dea.gl/tags/</loc>
-    <lastmod>2020-08-18T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dea.gl/tags/web/</loc>
+    <loc>https://dea.gl/posts/2020/08/hands-on-with-tls/ssl-certificates/</loc>
     <lastmod>2020-08-18T00:00:00+00:00</lastmod>
   </url>
   
