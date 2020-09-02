@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "main.css",
-	"sourceRoot": "C:/Users/bdeagle/Documents/My Git/blog",
+	"sourceRoot": "C:/Users/bdeagle/Documents/Git/blog",
 	"sources": [
 		"themes/hello-friend-ng/assets/scss/main.scss",
 		"themes/hello-friend-ng/assets/scss/_normalize.scss",

@@ -15,10 +15,10 @@
             <pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
             
             <guid>https://dea.gl/posts/2020/08/hands-on-with-tls/ssl-certificates/</guid>
-            <description>Introduction In this article, I&amp;rsquo;ll discuss TLS/SSL certificates. To learn more than just the theory, I&amp;rsquo;ll be acting as my own Certificate Authority, which will allow me to generate all the required files for TLS/SSL communication.
+            <description>Introduction In this post, I&amp;rsquo;ll discuss TLS/SSL certificates. To learn more than just the theory, I&amp;rsquo;ll be acting as my own Certificate Authority, which will allow me to generate all the required files for TLS/SSL communication.
 What is SSL/TLS? SSL and TLS are both cryptographic protocols used to increase security by encrypting communication over computer networks. SSL stands for Secure Sockets Layer while TLS stands for Transport Layer Security. TLS is the successor of SSL 3.</description>
             <content type="html"><![CDATA[<h2 id="introduction">Introduction</h2>
-<p>In this article, I&rsquo;ll discuss TLS/SSL certificates. To learn more than just the theory, I&rsquo;ll be acting as my own Certificate Authority, which will allow me to generate all the required files for TLS/SSL communication.</p>
+<p>In this post, I&rsquo;ll discuss TLS/SSL certificates. To learn more than just the theory, I&rsquo;ll be acting as my own Certificate Authority, which will allow me to generate all the required files for TLS/SSL communication.</p>
 <h2 id="what-is-ssltls">What is SSL/TLS?</h2>
 <p>SSL and TLS are both cryptographic protocols used to increase security by encrypting communication over computer networks. SSL stands for <strong>Secure Sockets Layer</strong> while TLS stands for <strong>Transport Layer Security</strong>. TLS is the successor of SSL 3.0 and is now the standard (although both methods are still commonly referred to as SSL).</p>
 <h2 id="becoming-a-certificate-authority">Becoming a Certificate Authority</h2>
