@@ -10,11 +10,11 @@
         <atom:link href="https://dea.gl/posts/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
-            <title>Setting Up and Hardening a Raspberry Pi</title>
-            <link>https://dea.gl/posts/setting-up-and-hardening-a-raspberry-pi/</link>
+            <title>Hardening a Raspberry Pi</title>
+            <link>https://dea.gl/posts/hardening-a-raspberry-pi/</link>
             <pubDate>Fri, 20 Nov 2020 00:00:00 +0000</pubDate>
             
-            <guid>https://dea.gl/posts/setting-up-and-hardening-a-raspberry-pi/</guid>
+            <guid>https://dea.gl/posts/hardening-a-raspberry-pi/</guid>
             <description>One of the most fun things to play around with today is a Raspberry Pi. I&amp;rsquo;m constantly re-imaging my Raspberry Pi ,a nd so this guide walks through steps to take each time to ensure your device is sufficiently secure.
 The security of your Raspberry Pi is important. Gaps in security leave your Raspberry Pi open to hackers who can then use it without your permission.
 What level of security you need depends on how you wish to use your Raspberry Pi.</description>
