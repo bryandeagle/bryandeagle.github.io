@@ -4,17 +4,27 @@
   
   <url>
     <loc>https://dea.gl/</loc>
-    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+    <lastmod>2020-11-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://dea.gl/categories/</loc>
-    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+    <lastmod>2020-11-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://dea.gl/posts/</loc>
-    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+    <lastmod>2020-11-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dea.gl/posts/setting-up-and-hardening-a-raspberry-pi/</loc>
+    <lastmod>2020-11-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dea.gl/categories/web/</loc>
+    <lastmod>2020-11-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -89,11 +99,6 @@
   
   <url>
     <loc>https://dea.gl/posts/hands-on-with-tls/ssl-certificates/</loc>
-    <lastmod>2020-08-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://dea.gl/categories/web/</loc>
     <lastmod>2020-08-18T00:00:00+00:00</lastmod>
   </url>
   

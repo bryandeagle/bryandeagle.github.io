@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Tue, 01 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://dea.gl/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 20 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://dea.gl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting Up and Hardening a Raspberry Pi</title>
+      <link>https://dea.gl/posts/setting-up-and-hardening-a-raspberry-pi/</link>
+      <pubDate>Fri, 20 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://dea.gl/posts/setting-up-and-hardening-a-raspberry-pi/</guid>
+      <description>One of the most fun things to play around with today is a Raspberry Pi. I&amp;rsquo;m constantly re-imaging my Raspberry Pi ,a nd so this guide walks through steps to take each time to ensure your device is sufficiently secure.
+The security of your Raspberry Pi is important. Gaps in security leave your Raspberry Pi open to hackers who can then use it without your permission.
+What level of security you need depends on how you wish to use your Raspberry Pi.</description>
+    </item>
+    
     <item>
       <title>What is Project Management</title>
       <link>https://dea.gl/posts/what-is-project-management/</link>
@@ -105,16 +116,6 @@ Note: Using anything related to strings will give a score of .</description>
 1 22 333 4444 55555 ...... Can you do it using only arithmetic operations, a single for loop and print statement?
 Use no more than two lines. The first line (the for statement) is already written for you. You have to complete the print statement.
 Note: Using anything related to strings will give a score of 0.</description>
-    </item>
-    
-    <item>
-      <title>Hands-On with TLS/SSL Certificates</title>
-      <link>https://dea.gl/posts/hands-on-with-tls/ssl-certificates/</link>
-      <pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://dea.gl/posts/hands-on-with-tls/ssl-certificates/</guid>
-      <description>Introduction In this post, I&amp;rsquo;ll discuss TLS/SSL certificates. To learn more than just the theory, I&amp;rsquo;ll be acting as my own Certificate Authority, which will allow me to generate all the required files for TLS/SSL communication.
-What is SSL/TLS? SSL and TLS are both cryptographic protocols used to increase security by encrypting communication over computer networks. SSL stands for Secure Sockets Layer while TLS stands for Transport Layer Security. TLS is the successor of SSL 3.</description>
     </item>
     
   </channel>
