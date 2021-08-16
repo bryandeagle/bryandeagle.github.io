@@ -7,7 +7,29 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 20 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://dea.gl/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 31 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://dea.gl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Learning About Man-in-the-Middle Attacks with a Raspberry Pi</title>
+      <link>https://dea.gl/posts/learning-about-man-in-the-middle-attacks-with-a-raspberry-pi/</link>
+      <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://dea.gl/posts/learning-about-man-in-the-middle-attacks-with-a-raspberry-pi/</guid>
+      <description>Setting up the Raspberry Pi I download the Raspberry Pi image from the official site
+Securing the Raspberry Pi C
+passwdI followed this article to add some reasonable security to the pi.
+Since I&amp;rsquo;ve installed the firewall ufw, I&amp;rsquo;ll be allowing SSH, HTTP and HTTPS with the following commands
+ufw allow SSHufw allow HTTPufw allow HTTPSConfiguring the Raspberry Pi as a Gateway Installing MITM Proxy apt update &amp;amp;&amp;amp; apt install mitmproxy</description>
+    </item>
+    
+    <item>
+      <title>Virtual Private Networks</title>
+      <link>https://dea.gl/posts/virtual-private-networks/</link>
+      <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://dea.gl/posts/virtual-private-networks/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Hardening a Raspberry Pi</title>
       <link>https://dea.gl/posts/hardening-a-raspberry-pi/</link>
@@ -92,30 +114,6 @@ A valid credit card from ABCD Bank has the following characteristics:
       <description>Problem You are given an integer N followed by N email addresses. Your task is to print a list containing only valid email addresses in lexicographical order.
 Valid email addresses must follow these rules:
  It must have the username@websitename.extension format type. The username can only contain letters, digits, dashes and underscores. The website name can only have letters and digits. The maximum length of the extension is .  Concept A filter takes a function returning True or False and applies it to a sequence, returning a list of only those members of the sequence where the function returned True.</description>
-    </item>
-    
-    <item>
-      <title>Hackerrank Python: Triangle Quest 2</title>
-      <link>https://dea.gl/posts/hackerrank-python-triangle-quest-2/</link>
-      <pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://dea.gl/posts/hackerrank-python-triangle-quest-2/</guid>
-      <description>Problem You are given a positive integer N. Your task is to print a palindromic triangle of size N.
-For example, a palindromic triangle of size 5 is:
-1 121 12321 1234321 123454321 You can&amp;rsquo;t take more than two lines. The first line (a for-statement) is already written for you. You have to complete the code using exactly one print statement.
-Note: Using anything related to strings will give a score of .</description>
-    </item>
-    
-    <item>
-      <title>Hackerrank Python: Triangle Quest</title>
-      <link>https://dea.gl/posts/hackerrank-python-triangle-quest/</link>
-      <pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://dea.gl/posts/hackerrank-python-triangle-quest/</guid>
-      <description>Problem You are given a positive integer N. Print a numerical triangle of height N-1 like the one below:
-1 22 333 4444 55555 ...... Can you do it using only arithmetic operations, a single for loop and print statement?
-Use no more than two lines. The first line (the for statement) is already written for you. You have to complete the print statement.
-Note: Using anything related to strings will give a score of 0.</description>
     </item>
     
   </channel>

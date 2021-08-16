@@ -6,8 +6,45 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Fri, 20 Nov 2020 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Thu, 31 Dec 2020 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://dea.gl/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Learning About Man-in-the-Middle Attacks with a Raspberry Pi</title>
+            <link>https://dea.gl/posts/learning-about-man-in-the-middle-attacks-with-a-raspberry-pi/</link>
+            <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
+            
+            <guid>https://dea.gl/posts/learning-about-man-in-the-middle-attacks-with-a-raspberry-pi/</guid>
+            <description>Setting up the Raspberry Pi I download the Raspberry Pi image from the official site
+Securing the Raspberry Pi C
+passwdI followed this article to add some reasonable security to the pi.
+Since I&amp;rsquo;ve installed the firewall ufw, I&amp;rsquo;ll be allowing SSH, HTTP and HTTPS with the following commands
+ufw allow SSHufw allow HTTPufw allow HTTPSConfiguring the Raspberry Pi as a Gateway Installing MITM Proxy apt update &amp;amp;&amp;amp; apt install mitmproxy</description>
+            <content type="html"><![CDATA[<h2 id="setting-up-the-raspberry-pi">Setting up the Raspberry Pi</h2>
+<p>I download the Raspberry Pi image from <a href="https://www.raspberrypi.org/downloads/">the official site</a></p>
+<h2 id="securing-the-raspberry-pi">Securing the Raspberry Pi</h2>
+<p>C</p>
+<pre><code>passwd
+</code></pre><p>I followed <a href="https://www.raspberrypi.org/documentation/configuration/security.md">this article</a> to add some reasonable security to the pi.</p>
+<p>Since I&rsquo;ve installed the firewall ufw, I&rsquo;ll be allowing SSH, HTTP and HTTPS with the following commands</p>
+<pre><code>ufw allow SSH
+ufw allow HTTP
+ufw allow HTTPS
+</code></pre><h2 id="configuring-the-raspberry-pi-as-a-gateway">Configuring the Raspberry Pi as a Gateway</h2>
+<h2 id="installing-mitm-proxy">Installing MITM Proxy</h2>
+<pre><code>apt update &amp;&amp; apt install mitmproxy
+</code></pre>]]></content>
+        </item>
+        
+        <item>
+            <title>Virtual Private Networks</title>
+            <link>https://dea.gl/posts/virtual-private-networks/</link>
+            <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
+            
+            <guid>https://dea.gl/posts/virtual-private-networks/</guid>
+            <description></description>
+            <content type="html"><![CDATA[]]></content>
+        </item>
         
         <item>
             <title>Hardening a Raspberry Pi</title>
@@ -26,46 +63,46 @@ What level of security you need depends on how you wish to use your Raspberry Pi
 <h2 id="change-your-default-password">Change your default password</h2>
 <p>The default username and password is used for every single Raspberry Pi running Raspberry Pi OS. So, if you can get access to a Raspberry Pi, and these settings have not been changed, you have <code>root</code> access to that Raspberry Pi.</p>
 <p>So the first thing to do is change the password. This can be done via the raspi-config application, or from the command line.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo raspi-config
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo raspi-config
 </code></pre></div><p>Select option 2, and follow the instructions to change the password.</p>
 <p>In fact, all raspi-config does is start up the command line <code>passwd</code> application, which you can do from the command line. Simply type in your new password and confirm it.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">passwd
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">passwd
 </code></pre></div><h2 id="changing-your-username">Changing your username</h2>
 <p>You can, of course, make your Raspberry Pi even more secure by also changing your username. All Raspberry Pis come with the default username <code>pi</code>, so changing this will immediately make your Raspberry Pi more secure.</p>
 <p>To add a new user, enter:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo adduser alice
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo adduser alice
 </code></pre></div><p>You will be prompted to create a password for the new user.</p>
 <p>The new user will have a home directory at <code>/home/alice/</code>.</p>
 <p>To add them to the <code>sudo</code> group to give them <code>sudo</code> permissions as well as all of the other necessary permissions:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo usermod -a -G adm,dialout,cdrom,sudo,audio,video,plugdev,games,users,input,netdev,gpio,i2c,spi alice
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo usermod -a -G adm,dialout,cdrom,sudo,audio,video,plugdev,games,users,input,netdev,gpio,i2c,spi alice
 </code></pre></div><p>You can check your permissions are in place (i.e. you can use <code>sudo</code>) by trying the following:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo su - alice
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo su - alice
 </code></pre></div><p>If it runs successfully, then you can be sure that the new account is in the <code>sudo</code> group.</p>
 <p>Once you have confirmed that the new account is working, you can delete the <code>pi</code> user. In order to do this, you&rsquo;ll need to first close its process with the following:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo pkill -u pi
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo pkill -u pi
 </code></pre></div><p>Please note that with the current Raspberry Pi OS distribution, there are some aspects that require the <code>pi</code> user to be present. If you are unsure whether you will be affected by this, then leave the <code>pi</code> user in place. Work is being done to reduce the dependency on the <code>pi</code> user.</p>
 <p>To delete the <code>pi</code> user, type the following:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo deluser pi
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo deluser pi
 </code></pre></div><p>This command will delete the <code>pi</code> user but will leave the <code>/home/pi</code> folder. If necessary, you can use the command below to remove the home folder for the <code>pi</code> user at the same time. Note the data in this folder will be permanently deleted, so make sure any required data is stored elsewhere.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo deluser -remove-home pi
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo deluser -remove-home pi
 </code></pre></div><p>This command will result in a warning that the group <code>pi</code> has no more members. The <code>deluser</code> command removes both the <code>pi</code> user and the <code>pi</code> group though, so the warning can be safely ignored.</p>
 <h2 id="make-sudo-require-a-password">Make <code>sudo</code> require a password</h2>
 <p>Placing <code>sudo</code> in front of a command runs it as a superuser, and by default, that does not need a password. In general, this is not a problem. However, if your Pi is exposed to the internet and somehow becomes exploited (perhaps via a webpage exploit for example), the attacker will be able to change things that require superuser credentials, unless you have set <code>sudo</code> to require a password.</p>
 <p>To force <code>sudo</code> to require a password, enter:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo visudo /etc/sudoers.d/010_pi-nopasswd
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo visudo /etc/sudoers.d/010_pi-nopasswd
 </code></pre></div><p>and change the <code>pi</code> entry (or whichever usernames have superuser rights) to:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pi ALL<span style="color:#f92672">=(</span>ALL<span style="color:#f92672">)</span> PASSWD: ALL
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pi ALL<span style="color:#f92672">=(</span>ALL<span style="color:#f92672">)</span> PASSWD: ALL
 </code></pre></div><p>Then save the file: it will be checked for any syntax errors. If no errors were detected, the file will be saved and you will be returned to the shell prompt. If errors were detected, you will be asked &lsquo;what now?&rsquo; Press the &lsquo;enter&rsquo; key on your keyboard: this will bring up a list of options. You will probably want to use &lsquo;e&rsquo; for &lsquo;(e)dit sudoers file again,&rsquo; so you can edit the file and fix the problem. <strong>Note that choosing option &lsquo;Q&rsquo; will save the file with any syntax errors still in place, which makes it impossible for <em>any</em> user to use the sudo command.</strong></p>
 <h2 id="ensure-you-have-the-latest-security-fixes">Ensure you have the latest security fixes</h2>
 <p>This can be as simple as ensuring your version of Raspberry Pi OS is up-to-date, as an up-to-date distribution contains all the latest security fixes. Full instructions can be found <a href="../raspbian/updating.md">here</a>.</p>
 <p>If you are using SSH to connect to your Raspberry Pi, it can be worthwhile to add a cron job that specifically updates the ssh-server. The following command, perhaps as a daily cron job, will ensure you have the latest SSH security fixes promptly, independent of your normal update process. More information on setting up cron can be found <a href="../linux/usage/cron.md">here</a></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apt install openssh-server
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apt install openssh-server
 </code></pre></div><h2 id="improving-ssh-security">Improving SSH security</h2>
 <p>SSH is a common way of accessing a Raspberry Pi remotely. By default, logging in with SSH requires a username/password pair, and there are ways to make this more secure. An even more secure method is to use key based authentication.</p>
 <h3 id="improving-usernamepassword-security">Improving username/password security</h3>
 <p>The most important thing to do is ensure you have a very robust password. If your Raspberry Pi is exposed to the internet, the password needs to be very secure. This will help to avoid dictionary attacks or the like.</p>
 <p>You can also <strong>allow</strong> or <strong>deny</strong> specific users by altering the <code>sshd</code> configuration.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo nano /etc/ssh/sshd_config
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo nano /etc/ssh/sshd_config
 </code></pre></div><p>Add, edit, or append to the end of the file the following line, which contains the usernames you wish to allow to log in:</p>
 <pre><code>AllowUsers alice bob
 </code></pre><p>You can also use <code>DenyUsers</code> to specifically stop some usernames from logging in:</p>
@@ -78,41 +115,41 @@ What level of security you need depends on how you wish to use your Raspberry Pi
 <p>You will be prompted for a passphrase during key generation: this is an extra level of security. For the moment, leave this blank.</p>
 <p>The public key now needs to be moved on to the server: see <a href="../remote-access/ssh/passwordless.md#copy-your-public-key-to-your-raspberry-pi">Copy your public key to your Raspberry Pi</a>.</p>
 <p>Finally, we need to disable password logins, so that all authentication is done by the key pairs.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo nano /etc/ssh/sshd_config
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo nano /etc/ssh/sshd_config
 </code></pre></div><p>There are three lines that need to be changed to <code>no</code>, if they are not set that way already:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ChallengeResponseAuthentication no
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ChallengeResponseAuthentication no
 PasswordAuthentication no
 UsePAM no
 </code></pre></div><p>Save the file and either restart the ssh system with <code>sudo service ssh reload</code> or reboot.</p>
 <h2 id="install-a-firewall">Install a firewall</h2>
 <p>There are many firewall solutions available for Linux. Most use the underlying <a href="http://www.netfilter.org/projects/iptables/index.html">iptables</a> project to provide packet filtering. This project sits over the Linux netfiltering system. <code>iptables</code> is installed by default on Raspberry Pi OS, but is not set up. Setting it up can be a complicated task, and one project that provides a simpler interface than <code>iptables</code> is <a href="https://www.linux.com/learn/introduction-uncomplicated-firewall-ufw">ufw</a>, which stands for &lsquo;Uncomplicated Fire Wall&rsquo;. This is the default firewall tool in Ubuntu, and can be easily installed on your Raspberry Pi:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt install ufw
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt install ufw
 </code></pre></div><p><code>ufw</code> is a fairly straightforward command line tool, although there are some GUIs available for it. This document will describe a few of the basic command line options. Note that <code>ufw</code> needs to be run with superuser privileges, so all commands are preceded with <code>sudo</code>. It is also possible to use the option <code>--dry-run</code> any <code>ufw</code> commands, which indicates the results of the command without actually making any changes.</p>
 <p>To enable the firewall, which will also ensure it starts up on boot, use:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ufw enable
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ufw enable
 </code></pre></div><p>To disable the firewall, and disable start up on boot, use:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ufw disable
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ufw disable
 </code></pre></div><p>Allow a particular port to have access (we have used port 22 in our example):</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ufw allow <span style="color:#ae81ff">22</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ufw allow <span style="color:#ae81ff">22</span>
 </code></pre></div><p>Denying access on a port is also very simple (again, we have used port 22 as an example):</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ufw deny <span style="color:#ae81ff">22</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ufw deny <span style="color:#ae81ff">22</span>
 </code></pre></div><p>You can also specify which service you are allowing or denying on a port. In this example, we are denying tcp on port 22:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ufw deny 22/tcp
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ufw deny 22/tcp
 </code></pre></div><p>You can specify the service even if you do not know which port it uses. This example allows the ssh service access through the firewall:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ufw allow ssh
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ufw allow ssh
 </code></pre></div><p>The status command lists all current settings for the firewall:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ufw status
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ufw status
 </code></pre></div><p>The rules can be quite complicated, allowing specific IP addresses to be blocked, specifying in which direction traffic is allowed, or limiting the number of attempts to connect, for example to help defeat a Denial of Service (DoS) attack. You can also specify the device rules are to be applied to (e.g. eth0, wlan0). Please refer to the <code>ufw</code> man page (<code>man ufw</code>) for full details, but here are some examples of more sophisticated commands.</p>
 <p>Limit login attempts on ssh port using tcp: this denies connection if an IP address has attempted to connect six or more times in the last 30 seconds:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ufw limit ssh/tcp
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ufw limit ssh/tcp
 </code></pre></div><p>Deny access to port 30 from IP address 192.168.2.1</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ufw deny from 192.168.2.1 port <span style="color:#ae81ff">30</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ufw deny from 192.168.2.1 port <span style="color:#ae81ff">30</span>
 </code></pre></div><h2 id="installing-fail2ban">Installing fail2ban</h2>
 <p>If you are using your Raspberry Pi as some sort of server, for example an <code>ssh</code> or a webserver, your firewall will have deliberate &lsquo;holes&rsquo; in it to let the server traffic through. In these cases, <a href="http://www.fail2ban.org">Fail2ban</a> can be useful. Fail2ban, written in Python, is a scanner that examines the log files produced by the Raspberry Pi, and checks them for suspicious activity. It catches things like multiple brute-force attempts to log in, and can inform any installed firewall to stop further login attempts from suspicious IP addresses. It saves you having to manually check log files for intrusion attempts and then update the firewall (via <code>iptables</code>) to prevent them.</p>
 <p>Install fail2ban using the following command:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt install fail2ban
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt install fail2ban
 </code></pre></div><p>On installation, Fail2ban creates a folder <code>/etc/fail2ban</code> in which there is a configuration file called <code>jail.conf</code>. This needs to be copied to <code>jail.local</code> to enable it. Inside this configuration file are a set of default options, together with options for checking specific services for abnormalities. Do the following to examine/change the rules that are used for <code>ssh</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 sudo nano /etc/fail2ban/jail.local
 </code></pre></div><p>Add the following section to the <code>jail.conf</code> file. On some versions of fail2ban this section may already exist, so update this pre-existing section it if it is there.</p>
 <pre><code>[ssh]
@@ -122,7 +159,7 @@ filter   = sshd
 logpath  = /var/log/auth.log
 maxretry = 6
 </code></pre><p>As you can see, this section is named ssh, is enabled, examines the ssh port, filters using the <code>sshd</code> parameters, parses the <code>/var/log/auth.log</code> for malicious activity, and allows six retries before the detection threshold is reached. Checking the default section, we can see that the default banning action is:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Default banning action (e.g. iptables, iptables-new,</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Default banning action (e.g. iptables, iptables-new,</span>
 <span style="color:#75715e"># iptables-multiport, shorewall, etc) It is used to define</span>
 <span style="color:#75715e"># action_* variables. Can be overridden globally or per</span>
 <span style="color:#75715e"># section within jail.local file</span>
@@ -178,7 +215,7 @@ This means that in the Gregorian calendar, the years 2000 and 2400 are leap year
 <p>Given a year, determine whether it is a leap year. If it is a leap year, return the Boolean True, otherwise return False.</p>
 <p>Note that the code stub provided reads from STDIN and passes arguments to the is_leap function. It is only necessary to complete the is_leap function.</p>
 <h3 id="solution">Solution</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">is_leap</span>(year):
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">is_leap</span>(year):
     <span style="color:#66d9ef">return</span> (year <span style="color:#f92672">%</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) <span style="color:#f92672">and</span> ((year <span style="color:#f92672">%</span> <span style="color:#ae81ff">100</span> <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>) <span style="color:#f92672">or</span> (year <span style="color:#f92672">%</span> <span style="color:#ae81ff">400</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>))
 </code></pre></div>]]></content>
         </item>
@@ -201,7 +238,7 @@ The score of a single word is 2 if the word contains an even number of vowels. O
 <p>Debug the given function score_words such that it returns a correct score.</p>
 <p>Your function will be tested on several cases by the locked template code.</p>
 <h2 id="solution">Solution</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">is_vowel</span>(letter):
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">is_vowel</span>(letter):
     <span style="color:#66d9ef">return</span> letter <span style="color:#f92672">in</span> [<span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;e&#39;</span>, <span style="color:#e6db74">&#39;i&#39;</span>, <span style="color:#e6db74">&#39;o&#39;</span>, <span style="color:#e6db74">&#39;u&#39;</span>, <span style="color:#e6db74">&#39;y&#39;</span>]
 
 <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">score_words</span>(words):
@@ -232,7 +269,7 @@ Solution from collections import OrderedDict d = OrderedDict() for _ in range(in
 <p>You are given n words. Some words may repeat. For each word, output its number of occurrences. The output order should correspond with the input order of appearance of the word. See the sample input/output for clarification.</p>
 <p>Note: Each input line ends with a &ldquo;\n&rdquo; character.</p>
 <h2 id="solution">Solution</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> OrderedDict
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> OrderedDict
 d <span style="color:#f92672">=</span> OrderedDict()
 <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(int(input())):
     line <span style="color:#f92672">=</span> input()
@@ -240,8 +277,8 @@ d <span style="color:#f92672">=</span> OrderedDict()
         d[line] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
     <span style="color:#66d9ef">else</span>:
         d[line] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
-<span style="color:#66d9ef">print</span>(len(d))
-<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39; &#39;</span><span style="color:#f92672">.</span>join([str(d[i]) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> d<span style="color:#f92672">.</span>keys()]))
+print(len(d))
+print(<span style="color:#e6db74">&#39; &#39;</span><span style="color:#f92672">.</span>join([str(d[i]) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> d<span style="color:#f92672">.</span>keys()]))
 </code></pre></div>]]></content>
         </item>
         
@@ -261,17 +298,17 @@ d <span style="color:#f92672">=</span> OrderedDict()
 </ol>
 <p>Alternating repetitive digits are digits which repeat immediately after the next digit. In other words, an alternating repetitive digit pair is formed by two equal digits that have just a single digit between them.</p>
 <p>For example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ae81ff">121426</span> <span style="color:#75715e"># Here, 1 is an alternating repetitive digit.</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ae81ff">121426</span> <span style="color:#75715e"># Here, 1 is an alternating repetitive digit.</span>
 <span style="color:#ae81ff">523563</span> <span style="color:#75715e"># Here, NO digit is an alternating repetitive digit.</span>
 <span style="color:#ae81ff">552523</span> <span style="color:#75715e"># Here, both 2 and 5 are alternating repetitive digits.</span>
 </code></pre></div><p>Your task is to provide two regular expressions regex_integer_in_range and regex_alternating_repetitive_digit_pair. Where:</p>
 <p>regex_integer_in_range should match only integers range from 100000 to 999999 inclusive</p>
 <p>regex_alternating_repetitive_digit_pair should find alternating repetitive digits pairs in a given string.</p>
 <p>Both these regular expressions will be used by the provided code template to check if the input string P is a valid postal code using the following expression:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">(bool(re<span style="color:#f92672">.</span>match(regex_integer_in_range, P)) 
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">(bool(re<span style="color:#f92672">.</span>match(regex_integer_in_range, P)) 
 <span style="color:#f92672">and</span> len(re<span style="color:#f92672">.</span>findall(regex_alternating_repetitive_digit_pair, P)) <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">2</span>)
 </code></pre></div><h2 id="solution">Solution</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">regex_integer_in_range <span style="color:#f92672">=</span> <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^[1-9][0-9]{5}$&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">regex_integer_in_range <span style="color:#f92672">=</span> <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^[1-9][0-9]</span><span style="color:#e6db74">{5}</span><span style="color:#e6db74">$&#34;</span>
 regex_alternating_repetitive_digit_pair <span style="color:#f92672">=</span> <span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;(\d)(?=\d\1)&#34;</span>
 </code></pre></div>]]></content>
         </item>
@@ -296,27 +333,27 @@ A valid credit card from ABCD Bank has the following characteristics:
 ► It must NOT have 4 or more consecutive repeated digits.</p>
 <h3 id="examples">Examples:</h3>
 <p>Valid Credit Card Numbers</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ae81ff">4253625879615786</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ae81ff">4253625879615786</span>
 <span style="color:#ae81ff">4424424424442444</span>
 <span style="color:#ae81ff">5122</span><span style="color:#f92672">-</span><span style="color:#ae81ff">2368</span><span style="color:#f92672">-</span><span style="color:#ae81ff">7954</span><span style="color:#f92672">-</span><span style="color:#ae81ff">3214</span>
 </code></pre></div><p>Invalid Credit Card Numbers</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ae81ff">42536258796157867</span>       <span style="color:#75715e">#17 digits in card number → Invalid </span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ae81ff">42536258796157867</span>       <span style="color:#75715e">#17 digits in card number → Invalid </span>
 <span style="color:#ae81ff">4424444424442444</span>        <span style="color:#75715e">#Consecutive digits are repeating 4 or more times → Invalid</span>
 <span style="color:#ae81ff">5122</span><span style="color:#f92672">-</span><span style="color:#ae81ff">2368</span><span style="color:#f92672">-</span><span style="color:#ae81ff">7954</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">3214</span>   <span style="color:#75715e">#Separators other than &#39;-&#39; are used → Invalid</span>
 <span style="color:#ae81ff">44244</span>x4424442444        <span style="color:#75715e">#Contains non digit characters → Invalid</span>
-<span style="color:#ae81ff">05253625</span><span style="color:#ae81ff">87961578</span>        <span style="color:#75715e">#Doesn&#39;t start with 4, 5 or 6 → Invalid</span>
+<span style="color:#ae81ff">0525362587961578</span>        <span style="color:#75715e">#Doesn&#39;t start with 4, 5 or 6 → Invalid</span>
 </code></pre></div><h2 id="solution">Solution</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> re
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> re
 
 <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(int(input())):
     s <span style="color:#f92672">=</span> input()
-    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> re<span style="color:#f92672">.</span>match(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;^[4-6]\d{3}-?\d{4}-?\d{4}-?\d{4}$&#39;</span>, s):
-        <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Invalid&#39;</span>)
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> re<span style="color:#f92672">.</span>match(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;^[4-6]\d</span><span style="color:#e6db74">{3}</span><span style="color:#e6db74">-?\d</span><span style="color:#e6db74">{4}</span><span style="color:#e6db74">-?\d</span><span style="color:#e6db74">{4}</span><span style="color:#e6db74">-?\d</span><span style="color:#e6db74">{4}</span><span style="color:#e6db74">$&#39;</span>, s):
+        print(<span style="color:#e6db74">&#39;Invalid&#39;</span>)
     <span style="color:#66d9ef">else</span>:
         <span style="color:#66d9ef">if</span> re<span style="color:#f92672">.</span>search(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(\d)\1\1\1&#39;</span>, re<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;-&#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>, s)):
-            <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Invalid&#39;</span>)
+            print(<span style="color:#e6db74">&#39;Invalid&#39;</span>)
         <span style="color:#66d9ef">else</span>:
-            <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Valid&#39;</span>)
+            print(<span style="color:#e6db74">&#39;Valid&#39;</span>)
 </code></pre></div>]]></content>
         </item>
         
@@ -341,13 +378,13 @@ Valid email addresses must follow these rules:
 <h3 id="concept">Concept</h3>
 <p>A filter takes a function returning True or False and applies it to a sequence, returning a list of only those members of the sequence where the function returned True. A Lambda function can be used with filters.</p>
 <p>Let&rsquo;s say you have to make a list of the squares of integers from 0 to 9 (both included).</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;</span> l <span style="color:#f92672">=</span> list(range(<span style="color:#ae81ff">10</span>))
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;</span> l <span style="color:#f92672">=</span> list(range(<span style="color:#ae81ff">10</span>))
 <span style="color:#f92672">&gt;&gt;</span> l <span style="color:#f92672">=</span> list(map(<span style="color:#66d9ef">lambda</span> x:x<span style="color:#f92672">*</span>x, l))
 </code></pre></div><p>Now, you only require those elements that are greater than 10 but less than 80.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;</span> l <span style="color:#f92672">=</span> list(filter(<span style="color:#66d9ef">lambda</span> x: x <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">and</span> x <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">80</span>, l))
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;</span> l <span style="color:#f92672">=</span> list(filter(<span style="color:#66d9ef">lambda</span> x: x <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">and</span> x <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">80</span>, l))
 </code></pre></div><p>Easy, isn&rsquo;t it?</p>
 <h2 id="solution">Solution</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> re
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> re
 
 <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">fun</span>(s):
     <span style="color:#66d9ef">return</span> re<span style="color:#f92672">.</span>match(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;^[A-Za-z0-9\-_]+@[A-Za-z0-9]+\.[A-Za-z]{1,3}$&#39;</span>, s)
@@ -368,7 +405,7 @@ Note: Using anything related to strings will give a score of .</description>
 <p>You are given a positive integer N.
 Your task is to print a palindromic triangle of size N.</p>
 <p>For example, a palindromic triangle of size 5 is:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ae81ff">1</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ae81ff">1</span>
 <span style="color:#ae81ff">121</span>
 <span style="color:#ae81ff">12321</span>
 <span style="color:#ae81ff">1234321</span>
@@ -379,8 +416,8 @@ You have to complete the code using exactly one print statement.</p>
 Using anything related to strings will give a score of .
 Using more than one for-statement will give a score of .</p>
 <h2 id="solution">Solution</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>,int(input())<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
-    <span style="color:#66d9ef">print</span>((<span style="color:#ae81ff">10</span><span style="color:#f92672">**</span>i<span style="color:#f92672">//</span><span style="color:#ae81ff">9</span>)<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span>)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>,int(input())<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+    print((<span style="color:#ae81ff">10</span><span style="color:#f92672">**</span>i<span style="color:#f92672">//</span><span style="color:#ae81ff">9</span>)<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span>)
 </code></pre></div>]]></content>
         </item>
         
@@ -396,7 +433,7 @@ Use no more than two lines. The first line (the for statement) is already writte
 Note: Using anything related to strings will give a score of 0.</description>
             <content type="html"><![CDATA[<h2 id="problem">Problem</h2>
 <p>You are given a positive integer N. Print a numerical triangle of height N-1 like the one below:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ae81ff">1</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ae81ff">1</span>
 <span style="color:#ae81ff">22</span>
 <span style="color:#ae81ff">333</span>
 <span style="color:#ae81ff">4444</span>
@@ -406,8 +443,8 @@ Note: Using anything related to strings will give a score of 0.</description>
 <p>Use no more than two lines. The first line (the for statement) is already written for you. You have to complete the print statement.</p>
 <p>Note: Using anything related to strings will give a score of 0.</p>
 <h2 id="solution">Solution</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>,int(input())):
-    <span style="color:#66d9ef">print</span>(<span style="color:#ae81ff">10</span><span style="color:#f92672">**</span>i<span style="color:#f92672">//</span><span style="color:#ae81ff">9</span><span style="color:#f92672">*</span>i)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>,int(input())):
+    print(<span style="color:#ae81ff">10</span><span style="color:#f92672">**</span>i<span style="color:#f92672">//</span><span style="color:#ae81ff">9</span><span style="color:#f92672">*</span>i)
 </code></pre></div>]]></content>
         </item>
         
@@ -525,11 +562,11 @@ Since sometimes posts are published and viewed in different time zones, this can
 <p>Day dd Mon yyyy hh:mm:ss +xxxx</p>
 <p>Here +xxxx represents the time zone. Your task is to print the absolute difference (in seconds) between them.</p>
 <h2 id="solution">Solution</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> datetime <span style="color:#f92672">import</span> datetime <span style="color:#66d9ef">as</span> dt
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> datetime <span style="color:#f92672">import</span> datetime <span style="color:#66d9ef">as</span> dt
 
-fmt <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;%a </span><span style="color:#e6db74">%d</span><span style="color:#e6db74"> %b %Y %H:%M:%S %z&#39;</span>
+fmt <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%a</span><span style="color:#e6db74"> </span><span style="color:#e6db74">%d</span><span style="color:#e6db74"> %b %Y %H:%M:%S %z&#39;</span>
 <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(int(input())):
-    <span style="color:#66d9ef">print</span>(int(abs((dt<span style="color:#f92672">.</span>strptime(input(), fmt) <span style="color:#f92672">-</span> 
+    print(int(abs((dt<span style="color:#f92672">.</span>strptime(input(), fmt) <span style="color:#f92672">-</span> 
                    dt<span style="color:#f92672">.</span>strptime(input(), fmt))<span style="color:#f92672">.</span>total_seconds())))
 </code></pre></div>]]></content>
         </item>
@@ -559,7 +596,7 @@ Kevin&rsquo;s vowel beginning word = ANA
 Here, ANA occurs twice in BANANA. Hence, Kevin will get 2 Points.</p>
 <p>Your task is to determine the winner of the game and their score.</p>
 <h3 id="solution">Solution</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">minion_game</span>(string):
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">minion_game</span>(string):
     scores <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;Kevin&#39;</span>: <span style="color:#ae81ff">0</span>, <span style="color:#e6db74">&#39;Stuart&#39;</span>: <span style="color:#ae81ff">0</span>}
     <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(string)):
         <span style="color:#66d9ef">if</span> string[i] <span style="color:#f92672">in</span> <span style="color:#e6db74">&#39;AEIOU&#39;</span>:
@@ -568,11 +605,11 @@ Here, ANA occurs twice in BANANA. Hence, Kevin will get 2 Points.</p>
             scores[<span style="color:#e6db74">&#39;Stuart&#39;</span>] <span style="color:#f92672">+=</span> len(string) <span style="color:#f92672">-</span> i
     
     <span style="color:#66d9ef">if</span> scores[<span style="color:#e6db74">&#39;Stuart&#39;</span>] <span style="color:#f92672">==</span> scores[<span style="color:#e6db74">&#39;Kevin&#39;</span>]:
-        <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Draw&#39;</span>)
+        print(<span style="color:#e6db74">&#39;Draw&#39;</span>)
     <span style="color:#66d9ef">elif</span> scores[<span style="color:#e6db74">&#39;Stuart&#39;</span>] <span style="color:#f92672">&gt;</span> scores[<span style="color:#e6db74">&#39;Kevin&#39;</span>]:
-        <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Stuart {}&#34;</span><span style="color:#f92672">.</span>format(scores[<span style="color:#e6db74">&#39;Stuart&#39;</span>]))
+        print(<span style="color:#e6db74">&#34;Stuart </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>format(scores[<span style="color:#e6db74">&#39;Stuart&#39;</span>]))
     <span style="color:#66d9ef">else</span>:
-        <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;Kevin {}&#39;</span><span style="color:#f92672">.</span>format(scores[<span style="color:#e6db74">&#39;Kevin&#39;</span>]))
+        print(<span style="color:#e6db74">&#39;Kevin </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#39;</span><span style="color:#f92672">.</span>format(scores[<span style="color:#e6db74">&#39;Kevin&#39;</span>]))
 </code></pre></div>]]></content>
         </item>
         
@@ -593,19 +630,19 @@ The re.sub() method returns the modified string as an output.</p>
 <p>Learn more about re.sub().</p>
 <h3 id="transformation-of-strings">Transformation of Strings</h3>
 <p>Code</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> re
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> re
 
 <span style="color:#75715e">#Squaring numbers</span>
 <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">square</span>(match):
     number <span style="color:#f92672">=</span> int(match<span style="color:#f92672">.</span>group(<span style="color:#ae81ff">0</span>))
     <span style="color:#66d9ef">return</span> str(number<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span>)
 
-<span style="color:#66d9ef">print</span> re<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;\d+&#34;</span>, square, <span style="color:#e6db74">&#34;1 2 3 4 5 6 7 8 9&#34;</span>)
+print re<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;\d+&#34;</span>, square, <span style="color:#e6db74">&#34;1 2 3 4 5 6 7 8 9&#34;</span>)
 </code></pre></div><p>Output</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ae81ff">1</span> <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">9</span> <span style="color:#ae81ff">16</span> <span style="color:#ae81ff">25</span> <span style="color:#ae81ff">36</span> <span style="color:#ae81ff">49</span> <span style="color:#ae81ff">64</span> <span style="color:#ae81ff">81</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ae81ff">1</span> <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">9</span> <span style="color:#ae81ff">16</span> <span style="color:#ae81ff">25</span> <span style="color:#ae81ff">36</span> <span style="color:#ae81ff">49</span> <span style="color:#ae81ff">64</span> <span style="color:#ae81ff">81</span>
 </code></pre></div><h3 id="replacements-in-strings">Replacements in Strings</h3>
 <p>Code</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> re
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> re
 
 html <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;
 </span><span style="color:#e6db74">&lt;head&gt;
@@ -619,9 +656,9 @@ html <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;
 </span><span style="color:#e6db74">&lt;/object&gt;
 </span><span style="color:#e6db74">&#34;&#34;&#34;</span>
 
-<span style="color:#66d9ef">print</span> re<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">&#34;(&lt;!--.*?--&gt;)&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>, html) <span style="color:#75715e">#remove comment</span>
+print re<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">&#34;(&lt;!--.*?--&gt;)&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>, html) <span style="color:#75715e">#remove comment</span>
 </code></pre></div><p>Output</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&lt;</span>head<span style="color:#f92672">&gt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&lt;</span>head<span style="color:#f92672">&gt;</span>
 <span style="color:#f92672">&lt;</span>title<span style="color:#f92672">&gt;</span>HTML<span style="color:#f92672">&lt;/</span>title<span style="color:#f92672">&gt;</span>
 <span style="color:#f92672">&lt;/</span>head<span style="color:#f92672">&gt;</span>
 <span style="color:#f92672">&lt;</span>object type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;application/x-flash&#34;</span> 
@@ -633,15 +670,15 @@ html <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;
 </code></pre></div><h3 id="task">Task</h3>
 <p>You are given a text of N lines. The text contains &amp;&amp; and || symbols.
 Your task is to modify those symbols to the following:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&amp;&amp;</span> <span style="color:#960050;background-color:#1e0010">→</span> <span style="color:#f92672">and</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&amp;&amp;</span> <span style="color:#960050;background-color:#1e0010">→</span> <span style="color:#f92672">and</span>
 <span style="color:#f92672">||</span> <span style="color:#960050;background-color:#1e0010">→</span> <span style="color:#f92672">or</span>
 </code></pre></div><p>Both &amp;&amp; and || should have a space &quot; &quot; on both sides.</p>
 <h2 id="solution">Solution</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> re
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> re
 <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(int(input())):
     s <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(?&lt;=\s)\&amp;\&amp;(?=\s)&#39;</span>, <span style="color:#e6db74">&#39;and&#39;</span>, input())
     s <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(?&lt;=\s)\|\|(?=\s)&#39;</span>, <span style="color:#e6db74">&#39;or&#39;</span>, s)
-    <span style="color:#66d9ef">print</span>(s)
+    print(s)
 </code></pre></div>]]></content>
         </item>
         
@@ -715,17 +752,17 @@ Concept The reduce() function applies a function of two arguments cumulatively o
 <p>Given a list of rational numbers,find their product.</p>
 <h3 id="concept">Concept</h3>
 <p>The reduce() function applies a function of two arguments cumulatively on a list of objects in succession from left to right to reduce it to one value. Say you have a list, say [1,2,3] and you have to find its sum.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> reduce(<span style="color:#66d9ef">lambda</span> x, y : x <span style="color:#f92672">+</span> y,[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>])
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> reduce(<span style="color:#66d9ef">lambda</span> x, y : x <span style="color:#f92672">+</span> y,[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>])
 <span style="color:#ae81ff">6</span>
 </code></pre></div><p>You can also define an initial value. If it is specified, the function will assume initial value as the value given, and then reduce. It is equivalent to adding the initial value at the beginning of the list. For example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> reduce(<span style="color:#66d9ef">lambda</span> x, y : x <span style="color:#f92672">+</span> y, [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>], <span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> reduce(<span style="color:#66d9ef">lambda</span> x, y : x <span style="color:#f92672">+</span> y, [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>], <span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>)
 <span style="color:#ae81ff">3</span>
 
 <span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">from</span> fractions <span style="color:#f92672">import</span> gcd
 <span style="color:#f92672">&gt;&gt;&gt;</span> reduce(gcd, [<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">8</span>], <span style="color:#ae81ff">3</span>)
 <span style="color:#ae81ff">1</span>
 </code></pre></div><h2 id="solution">Solution</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> fractions <span style="color:#f92672">import</span> Fraction
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> fractions <span style="color:#f92672">import</span> Fraction
 <span style="color:#f92672">from</span> functools <span style="color:#f92672">import</span> reduce
 
 <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">product</span>(fracs):
@@ -737,7 +774,7 @@ Concept The reduce() function applies a function of two arguments cumulatively o
     <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(int(input())):
         fracs<span style="color:#f92672">.</span>append(Fraction(<span style="color:#f92672">*</span>map(int, input()<span style="color:#f92672">.</span>split())))
     result <span style="color:#f92672">=</span> product(fracs)
-    <span style="color:#66d9ef">print</span>(<span style="color:#f92672">*</span>result)
+    print(<span style="color:#f92672">*</span>result)
 </code></pre></div>]]></content>
         </item>
         
@@ -753,7 +790,7 @@ When stacking the cubes, you can only pick up either the leftmost or the rightmo
 <p>There is a horizontal row of n cubes. The length of each cube is given. You need to create a new vertical pile of cubes. The new pile should follow these directions: if cube<!-- raw HTML omitted -->i<!-- raw HTML omitted --> is on top of cube<!-- raw HTML omitted -->j<!-- raw HTML omitted --> then sideLength<!-- raw HTML omitted -->j<!-- raw HTML omitted --> ≥ sideLength<!-- raw HTML omitted -->i<!-- raw HTML omitted -->.</p>
 <p>When stacking the cubes, you can only pick up either the leftmost or the rightmost cube each time. Print &ldquo;Yes&rdquo; if it is possible to stack the cubes. Otherwise, print &ldquo;No&rdquo;. Do not print the quotation marks.</p>
 <h2 id="solution">Solution</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> deque
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> deque
 
 <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(int(input())):
     _ <span style="color:#f92672">=</span> input()
@@ -777,7 +814,7 @@ When stacking the cubes, you can only pick up either the leftmost or the rightmo
             r <span style="color:#f92672">=</span> h<span style="color:#f92672">.</span>pop()
         <span style="color:#66d9ef">else</span>:
             res <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;No&#39;</span>
-    <span style="color:#66d9ef">print</span>(res)
+    print(res)
 </code></pre></div>]]></content>
         </item>
         
@@ -792,7 +829,7 @@ When stacking the cubes, you can only pick up either the leftmost or the rightmo
 <p>There is an array of n integers. There are also 2 disjoint sets, A and B, each containing m integers. You like all the integers in set A and dislike all the integers in set B. Your initial happiness is 0. For each i integer in the array, if i∈A, you add 1 to your happiness. If i∈B, you add -1 to your happiness. Otherwise, your happiness does not change. Output your final happiness at the end.</p>
 <p><strong>Note:</strong> Since A and B are sets, they have no repeated elements. However, the array might contain duplicate elements.</p>
 <h2 id="solution">Solution</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Get the input values</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Get the input values</span>
 _ <span style="color:#f92672">=</span> input()  <span style="color:#75715e"># Don&#39;t care about 1st line</span>
 arr <span style="color:#f92672">=</span> list(map(int, input()<span style="color:#f92672">.</span>split()))
 a <span style="color:#f92672">=</span> set(map(int, input()<span style="color:#f92672">.</span>split()))
@@ -804,7 +841,7 @@ score <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
         score <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
     <span style="color:#66d9ef">elif</span> n <span style="color:#f92672">in</span> b:
         score <span style="color:#f92672">-=</span><span style="color:#ae81ff">1</span>
-<span style="color:#66d9ef">print</span>(score)
+print(score)
 </code></pre></div>]]></content>
         </item>
         
@@ -830,14 +867,14 @@ score <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
 </ul>
 <p>Given s and k, print n/k lines where each line i denotes string u<!-- raw HTML omitted -->i<!-- raw HTML omitted -->.</p>
 <h2 id="solution">Solution</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">merge_the_tools</span>(string, k):
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">merge_the_tools</span>(string, k):
     u, i <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>, <span style="color:#ae81ff">1</span>
     <span style="color:#66d9ef">for</span> c <span style="color:#f92672">in</span> string:
         <span style="color:#66d9ef">if</span> c <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> u:
             u <span style="color:#f92672">+=</span> c
         <span style="color:#66d9ef">if</span> i <span style="color:#f92672">==</span> k:
             i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
-            <span style="color:#66d9ef">print</span>(u)
+            print(u)
             u <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
         <span style="color:#66d9ef">else</span>:
             i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
@@ -864,7 +901,7 @@ Note that you need to take exactly one element from each list, not necessarily t
 <p>% denotes the modulo operator.</p>
 <p>Note that you need to take exactly one element from each list, not necessarily the largest element. You add the squares of the chosen elements and perform the modulo operation. The maximum value that you can obtain, will be the answer to the problem.</p>
 <h2 id="solution">Solution</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> itertools
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> itertools
 
 (K, N) <span style="color:#f92672">=</span> map(int, input()<span style="color:#f92672">.</span>strip()<span style="color:#f92672">.</span>split())
 
@@ -872,7 +909,7 @@ L <span style="color:#f92672">=</span> list()
 <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(K):
     L<span style="color:#f92672">.</span>append(list(map(int, input()<span style="color:#f92672">.</span>strip()<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39; &#39;</span>)))[<span style="color:#ae81ff">1</span>:])
 
-S_max, L_max <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, None
+S_max, L_max <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#66d9ef">None</span>
 <span style="color:#66d9ef">for</span> l <span style="color:#f92672">in</span> itertools<span style="color:#f92672">.</span>product(<span style="color:#f92672">*</span>L):
     s <span style="color:#f92672">=</span> sum([x<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span> <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> l]) <span style="color:#f92672">%</span> N
 
@@ -880,7 +917,7 @@ S_max, L_max <span style="color:#f92672">=</span> <span style="color:#ae81ff">0<
         S_max <span style="color:#f92672">=</span> s
         L_max <span style="color:#f92672">=</span> l
 
-<span style="color:#66d9ef">print</span>(S_max)
+print(S_max)
 </code></pre></div>]]></content>
         </item>
         
@@ -900,7 +937,7 @@ If there are symbols or spaces between two alphanumeric characters of the decode
 <p>Neo feels that there is no need to use &lsquo;if&rsquo; conditions for decoding.</p>
 <p>Alphanumeric characters consist of: [A-Z, a-z, and 0-9].</p>
 <h2 id="solution">Solution</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> math
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> math
 <span style="color:#f92672">import</span> os
 <span style="color:#f92672">import</span> random
 <span style="color:#f92672">import</span> re
@@ -922,7 +959,7 @@ s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</s
 
 s <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(?&lt;=[A-Za-z0-9])[!@#$%&amp; ]+(?=[A-Za-z0-9])&#39;</span>, <span style="color:#e6db74">&#39; &#39;</span>, s)
 
-<span style="color:#66d9ef">print</span>(s)
+print(s)
 </code></pre></div>]]></content>
         </item>
         
@@ -941,7 +978,7 @@ You are given a list of N lowercase English letters. For a given integer K, you 
 <p>You are given a list of N lowercase English letters. For a given integer K, you can select any K indices (assume 1-based indexing) with a uniform probability from the list.</p>
 <p>Find the probability that at least one of the K indices selected will contain the letter: &lsquo;a&rsquo;.</p>
 <h2 id="solution">Solution</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> itertools <span style="color:#f92672">import</span> permutations
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> itertools <span style="color:#f92672">import</span> permutations
 
 n <span style="color:#f92672">=</span> int(input())
 s <span style="color:#f92672">=</span> input()<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#39; &#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>)
@@ -953,7 +990,7 @@ num <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
     <span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#39;a&#39;</span> <span style="color:#f92672">in</span> x:
         num <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
 
-<span style="color:#66d9ef">print</span>(num<span style="color:#f92672">/</span>len(p))
+print(num<span style="color:#f92672">/</span>len(p))
 </code></pre></div>]]></content>
         </item>
         
@@ -976,7 +1013,7 @@ S contains alphanumeric characters only.</p>
 <li>All sorted odd digits are ahead of sorted even digits.</li>
 </ul>
 <h2 id="solution">Solution</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(sorted(input(), key<span style="color:#f92672">=</span><span style="color:#66d9ef">lambda</span> i:<span style="color:#e6db74">&#39;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ 1357902468&#39;</span><span style="color:#f92672">.</span>find(i))))
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">print(<span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(sorted(input(), key<span style="color:#f92672">=</span><span style="color:#66d9ef">lambda</span> i:<span style="color:#e6db74">&#39;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ 1357902468&#39;</span><span style="color:#f92672">.</span>find(i))))
 </code></pre></div>]]></content>
         </item>
         
@@ -997,13 +1034,13 @@ Solution import cmath import math i = int(input()) r = int(input()) a = complex(
 <p>You are given the lengths AB and BC.</p>
 <p>Your task is to find ∠MBC (angle θ°, as shown in the figure) in degrees.</p>
 <h2 id="solution">Solution</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cmath
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> cmath
 <span style="color:#f92672">import</span> math
 
 i <span style="color:#f92672">=</span> int(input())
 r <span style="color:#f92672">=</span> int(input())
 a <span style="color:#f92672">=</span> complex(r, i)
-<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39;{:.0f}°&#39;</span><span style="color:#f92672">.</span>format(round(math<span style="color:#f92672">.</span>degrees(cmath<span style="color:#f92672">.</span>phase(a)),<span style="color:#ae81ff">0</span>)))
+print(<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{:.0f}</span><span style="color:#e6db74">°&#39;</span><span style="color:#f92672">.</span>format(round(math<span style="color:#f92672">.</span>degrees(cmath<span style="color:#f92672">.</span>phase(a)),<span style="color:#ae81ff">0</span>)))
 </code></pre></div>]]></content>
         </item>
         
@@ -1019,26 +1056,26 @@ def increment_by(n, increment=1): return n + increment The functions works like 
             <content type="html"><![CDATA[<h2 id="problem">Problem</h2>
 <p>In this challenge, the task is to debug the existing code to successfully execute all provided test files.</p>
 <p>Python supports a useful concept of default argument values. For each keyword argument of a function, we can assign a default value which is going to be used as the value of said argument if the function is called without it. For example, consider the following increment function:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">increment_by</span>(n, increment<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>):
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">increment_by</span>(n, increment<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>):
     <span style="color:#66d9ef">return</span> n <span style="color:#f92672">+</span> increment
 </code></pre></div><p>The functions works like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> increment_by(<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">2</span>)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> increment_by(<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">2</span>)
 <span style="color:#ae81ff">7</span>
 <span style="color:#f92672">&gt;&gt;&gt;</span> increment_by(<span style="color:#ae81ff">4</span>)
 <span style="color:#ae81ff">5</span>
 <span style="color:#f92672">&gt;&gt;&gt;</span>
 </code></pre></div><p>Debug the given function print_from_stream using the default value of one of its arguments.</p>
 <p>The function has the following signature:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">print_from_stream</span>(n, stream)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">print_from_stream</span>(n, stream)
 </code></pre></div><p>This function should print the first n values returned by get_next() method of stream object provided as an argument. Each of these values should be printed in a separate line.</p>
 <p>Whenever the function is called without the stream argument, it should use an instance of EvenStream class defined in the code stubs below as the value of stream.</p>
 <p>Your function will be tested on several cases by the locked template code.</p>
 <h2 id="solution">Solution</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">print_from_stream</span>(n, stream<span style="color:#f92672">=</span>None):
-    <span style="color:#66d9ef">if</span> stream <span style="color:#f92672">is</span> None:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">print_from_stream</span>(n, stream<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>):
+    <span style="color:#66d9ef">if</span> stream <span style="color:#f92672">is</span> <span style="color:#66d9ef">None</span>:
         stream <span style="color:#f92672">=</span> EvenStream()
     <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n):
-        <span style="color:#66d9ef">print</span>(stream<span style="color:#f92672">.</span>get_next())
+        print(stream<span style="color:#f92672">.</span>get_next())
 </code></pre></div>]]></content>
         </item>
         
@@ -1055,7 +1092,7 @@ Solution import math class Complex(object): def __init__(self, real, imaginary):
 <p>For this challenge, you are given two complex numbers, and you have to print the result of their addition, subtraction, multiplication, division and modulus operations.</p>
 <p>The real and imaginary precision part should be correct up to two decimal places.</p>
 <h2 id="solution">Solution</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> math
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> math
 
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Complex</span>(object):
     <span style="color:#66d9ef">def</span> __init__(self, real, imaginary):
@@ -1102,7 +1139,7 @@ Solution import math class Complex(object): def __init__(self, real, imaginary):
     d <span style="color:#f92672">=</span> map(float, input()<span style="color:#f92672">.</span>split())
     x <span style="color:#f92672">=</span> Complex(<span style="color:#f92672">*</span>c)
     y <span style="color:#f92672">=</span> Complex(<span style="color:#f92672">*</span>d)
-    <span style="color:#66d9ef">print</span>(<span style="color:#f92672">*</span>map(str, [x<span style="color:#f92672">+</span>y, x<span style="color:#f92672">-</span>y, x<span style="color:#f92672">*</span>y, x<span style="color:#f92672">/</span>y, x<span style="color:#f92672">.</span>mod(), y<span style="color:#f92672">.</span>mod()]), sep<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)
+    print(<span style="color:#f92672">*</span>map(str, [x<span style="color:#f92672">+</span>y, x<span style="color:#f92672">-</span>y, x<span style="color:#f92672">*</span>y, x<span style="color:#f92672">/</span>y, x<span style="color:#f92672">.</span>mod(), y<span style="color:#f92672">.</span>mod()]), sep<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)
 </code></pre></div>]]></content>
         </item>
         
@@ -1120,9 +1157,9 @@ For a better understanding of the problem, check the explanation.</description>
 <p>You are given a string S. Suppose a character &lsquo;c&rsquo; occurs consecutively X times in the string. Replace these consecutive occurrences of the character &lsquo;c&rsquo; with (X, c) in the string.</p>
 <p>For a better understanding of the problem, check the explanation.</p>
 <h2 id="solution">Solution</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> itertools <span style="color:#f92672">import</span> groupby
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> itertools <span style="color:#f92672">import</span> groupby
 
-<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39; &#39;</span><span style="color:#f92672">.</span>join([<span style="color:#e6db74">&#39;({}, {})&#39;</span><span style="color:#f92672">.</span>format(len(list(g)), k) <span style="color:#66d9ef">for</span> k,g <span style="color:#f92672">in</span> groupby(input())]))
+print(<span style="color:#e6db74">&#39; &#39;</span><span style="color:#f92672">.</span>join([<span style="color:#e6db74">&#39;(</span><span style="color:#e6db74">{}</span><span style="color:#e6db74">, </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">)&#39;</span><span style="color:#f92672">.</span>format(len(list(g)), k) <span style="color:#66d9ef">for</span> k,g <span style="color:#f92672">in</span> groupby(input())]))
 </code></pre></div>]]></content>
         </item>
         
@@ -1144,9 +1181,9 @@ For a better understanding of the problem, check the explanation.</description>
 <p>For example, according to the conditions described above,</p>
 <p>GOOGLE would have it&rsquo;s logo with the letters G, O, E.</p>
 <h2 id="solution">Solution</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> Counter
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> Counter
 <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> Counter(sorted(input()))<span style="color:#f92672">.</span>most_common(<span style="color:#ae81ff">3</span>):
-    <span style="color:#66d9ef">print</span>(<span style="color:#f92672">*</span>i)
+    print(<span style="color:#f92672">*</span>i)
 </code></pre></div>]]></content>
         </item>
         
@@ -1164,7 +1201,7 @@ Note: If two attributes are the same for different rows, for example, if two ath
 <p>Note that K is indexed from 0 to M-1, where M is the number of attributes.</p>
 <p><strong>Note:</strong> If two attributes are the same for different rows, for example, if two atheletes are of the same age, print the row that appeared first in the input.</p>
 <h2 id="solution">Solution</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">n,m <span style="color:#f92672">=</span> map(int, input()<span style="color:#f92672">.</span>split())
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">n,m <span style="color:#f92672">=</span> map(int, input()<span style="color:#f92672">.</span>split())
 data <span style="color:#f92672">=</span> []
 <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(n):
     data<span style="color:#f92672">.</span>append(list(map(int, input()<span style="color:#f92672">.</span>split())))
@@ -1173,7 +1210,7 @@ k <span style="color:#f92672">=</span> int(input())
 data<span style="color:#f92672">.</span>sort(key<span style="color:#f92672">=</span><span style="color:#66d9ef">lambda</span> x:x[k])
 
 <span style="color:#66d9ef">for</span> l <span style="color:#f92672">in</span> data:
-    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#39; &#39;</span><span style="color:#f92672">.</span>join([str(i) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> l]))
+    print(<span style="color:#e6db74">&#39; &#39;</span><span style="color:#f92672">.</span>join([str(i) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> l]))
 </code></pre></div>]]></content>
         </item>
         

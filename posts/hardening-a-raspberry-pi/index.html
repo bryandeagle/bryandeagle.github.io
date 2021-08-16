@@ -46,16 +46,10 @@ What level of security you need depends on how you wish to use your Raspberry Pi
 <meta itemprop="name" content="Hardening a Raspberry Pi">
 <meta itemprop="description" content="One of the most fun things to play around with today is a Raspberry Pi. I&rsquo;m constantly re-imaging my Raspberry Pi ,a nd so this guide walks through steps to take each time to ensure your device is sufficiently secure.
 The security of your Raspberry Pi is important. Gaps in security leave your Raspberry Pi open to hackers who can then use it without your permission.
-What level of security you need depends on how you wish to use your Raspberry Pi.">
-<meta itemprop="datePublished" content="2020-11-20T00:00:00+00:00" />
+What level of security you need depends on how you wish to use your Raspberry Pi."><meta itemprop="datePublished" content="2020-11-20T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2020-11-20T00:00:00+00:00" />
-<meta itemprop="wordCount" content="2283">
-<meta itemprop="image" content="https://dea.gl"/>
-
-
-
+<meta itemprop="wordCount" content="2283"><meta itemprop="image" content="https://dea.gl"/>
 <meta itemprop="keywords" content="" />
-
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://dea.gl"/>
 
@@ -105,7 +99,7 @@ What level of security you need depends on how you wish to use your Raspberry Pi
         <span class="header__right">
             
                 <nav class="menu">
-    <ul class="menu__inner"><li><a href="https://dea.gl/about/">About</a></li><li><a href="https://dea.gl/categories/coding/">Coding</a></li><li><a href="https://dea.gl/categories/web/">Web</a></li>
+    <ul class="menu__inner"><li><a href="https://dea.gl/categories/coding/">Coding</a></li><li><a href="https://dea.gl/categories/web/">Web</a></li>
     </ul>
 </nav>
 
@@ -160,46 +154,46 @@ What level of security you need depends on how you wish to use your Raspberry Pi
 <h2 id="change-your-default-password">Change your default password</h2>
 <p>The default username and password is used for every single Raspberry Pi running Raspberry Pi OS. So, if you can get access to a Raspberry Pi, and these settings have not been changed, you have <code>root</code> access to that Raspberry Pi.</p>
 <p>So the first thing to do is change the password. This can be done via the raspi-config application, or from the command line.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo raspi-config
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo raspi-config
 </code></pre></div><p>Select option 2, and follow the instructions to change the password.</p>
 <p>In fact, all raspi-config does is start up the command line <code>passwd</code> application, which you can do from the command line. Simply type in your new password and confirm it.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">passwd
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">passwd
 </code></pre></div><h2 id="changing-your-username">Changing your username</h2>
 <p>You can, of course, make your Raspberry Pi even more secure by also changing your username. All Raspberry Pis come with the default username <code>pi</code>, so changing this will immediately make your Raspberry Pi more secure.</p>
 <p>To add a new user, enter:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo adduser alice
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo adduser alice
 </code></pre></div><p>You will be prompted to create a password for the new user.</p>
 <p>The new user will have a home directory at <code>/home/alice/</code>.</p>
 <p>To add them to the <code>sudo</code> group to give them <code>sudo</code> permissions as well as all of the other necessary permissions:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo usermod -a -G adm,dialout,cdrom,sudo,audio,video,plugdev,games,users,input,netdev,gpio,i2c,spi alice
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo usermod -a -G adm,dialout,cdrom,sudo,audio,video,plugdev,games,users,input,netdev,gpio,i2c,spi alice
 </code></pre></div><p>You can check your permissions are in place (i.e. you can use <code>sudo</code>) by trying the following:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo su - alice
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo su - alice
 </code></pre></div><p>If it runs successfully, then you can be sure that the new account is in the <code>sudo</code> group.</p>
 <p>Once you have confirmed that the new account is working, you can delete the <code>pi</code> user. In order to do this, you&rsquo;ll need to first close its process with the following:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo pkill -u pi
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo pkill -u pi
 </code></pre></div><p>Please note that with the current Raspberry Pi OS distribution, there are some aspects that require the <code>pi</code> user to be present. If you are unsure whether you will be affected by this, then leave the <code>pi</code> user in place. Work is being done to reduce the dependency on the <code>pi</code> user.</p>
 <p>To delete the <code>pi</code> user, type the following:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo deluser pi
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo deluser pi
 </code></pre></div><p>This command will delete the <code>pi</code> user but will leave the <code>/home/pi</code> folder. If necessary, you can use the command below to remove the home folder for the <code>pi</code> user at the same time. Note the data in this folder will be permanently deleted, so make sure any required data is stored elsewhere.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo deluser -remove-home pi
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo deluser -remove-home pi
 </code></pre></div><p>This command will result in a warning that the group <code>pi</code> has no more members. The <code>deluser</code> command removes both the <code>pi</code> user and the <code>pi</code> group though, so the warning can be safely ignored.</p>
 <h2 id="make-sudo-require-a-password">Make <code>sudo</code> require a password</h2>
 <p>Placing <code>sudo</code> in front of a command runs it as a superuser, and by default, that does not need a password. In general, this is not a problem. However, if your Pi is exposed to the internet and somehow becomes exploited (perhaps via a webpage exploit for example), the attacker will be able to change things that require superuser credentials, unless you have set <code>sudo</code> to require a password.</p>
 <p>To force <code>sudo</code> to require a password, enter:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo visudo /etc/sudoers.d/010_pi-nopasswd
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo visudo /etc/sudoers.d/010_pi-nopasswd
 </code></pre></div><p>and change the <code>pi</code> entry (or whichever usernames have superuser rights) to:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pi ALL<span style="color:#f92672">=(</span>ALL<span style="color:#f92672">)</span> PASSWD: ALL
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pi ALL<span style="color:#f92672">=(</span>ALL<span style="color:#f92672">)</span> PASSWD: ALL
 </code></pre></div><p>Then save the file: it will be checked for any syntax errors. If no errors were detected, the file will be saved and you will be returned to the shell prompt. If errors were detected, you will be asked &lsquo;what now?&rsquo; Press the &lsquo;enter&rsquo; key on your keyboard: this will bring up a list of options. You will probably want to use &lsquo;e&rsquo; for &lsquo;(e)dit sudoers file again,&rsquo; so you can edit the file and fix the problem. <strong>Note that choosing option &lsquo;Q&rsquo; will save the file with any syntax errors still in place, which makes it impossible for <em>any</em> user to use the sudo command.</strong></p>
 <h2 id="ensure-you-have-the-latest-security-fixes">Ensure you have the latest security fixes</h2>
 <p>This can be as simple as ensuring your version of Raspberry Pi OS is up-to-date, as an up-to-date distribution contains all the latest security fixes. Full instructions can be found <a href="../raspbian/updating.md">here</a>.</p>
 <p>If you are using SSH to connect to your Raspberry Pi, it can be worthwhile to add a cron job that specifically updates the ssh-server. The following command, perhaps as a daily cron job, will ensure you have the latest SSH security fixes promptly, independent of your normal update process. More information on setting up cron can be found <a href="../linux/usage/cron.md">here</a></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apt install openssh-server
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apt install openssh-server
 </code></pre></div><h2 id="improving-ssh-security">Improving SSH security</h2>
 <p>SSH is a common way of accessing a Raspberry Pi remotely. By default, logging in with SSH requires a username/password pair, and there are ways to make this more secure. An even more secure method is to use key based authentication.</p>
 <h3 id="improving-usernamepassword-security">Improving username/password security</h3>
 <p>The most important thing to do is ensure you have a very robust password. If your Raspberry Pi is exposed to the internet, the password needs to be very secure. This will help to avoid dictionary attacks or the like.</p>
 <p>You can also <strong>allow</strong> or <strong>deny</strong> specific users by altering the <code>sshd</code> configuration.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo nano /etc/ssh/sshd_config
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo nano /etc/ssh/sshd_config
 </code></pre></div><p>Add, edit, or append to the end of the file the following line, which contains the usernames you wish to allow to log in:</p>
 <pre><code>AllowUsers alice bob
 </code></pre><p>You can also use <code>DenyUsers</code> to specifically stop some usernames from logging in:</p>
@@ -212,41 +206,41 @@ What level of security you need depends on how you wish to use your Raspberry Pi
 <p>You will be prompted for a passphrase during key generation: this is an extra level of security. For the moment, leave this blank.</p>
 <p>The public key now needs to be moved on to the server: see <a href="../remote-access/ssh/passwordless.md#copy-your-public-key-to-your-raspberry-pi">Copy your public key to your Raspberry Pi</a>.</p>
 <p>Finally, we need to disable password logins, so that all authentication is done by the key pairs.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo nano /etc/ssh/sshd_config
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo nano /etc/ssh/sshd_config
 </code></pre></div><p>There are three lines that need to be changed to <code>no</code>, if they are not set that way already:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ChallengeResponseAuthentication no
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ChallengeResponseAuthentication no
 PasswordAuthentication no
 UsePAM no
 </code></pre></div><p>Save the file and either restart the ssh system with <code>sudo service ssh reload</code> or reboot.</p>
 <h2 id="install-a-firewall">Install a firewall</h2>
 <p>There are many firewall solutions available for Linux. Most use the underlying <a href="http://www.netfilter.org/projects/iptables/index.html">iptables</a> project to provide packet filtering. This project sits over the Linux netfiltering system. <code>iptables</code> is installed by default on Raspberry Pi OS, but is not set up. Setting it up can be a complicated task, and one project that provides a simpler interface than <code>iptables</code> is <a href="https://www.linux.com/learn/introduction-uncomplicated-firewall-ufw">ufw</a>, which stands for &lsquo;Uncomplicated Fire Wall&rsquo;. This is the default firewall tool in Ubuntu, and can be easily installed on your Raspberry Pi:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt install ufw
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt install ufw
 </code></pre></div><p><code>ufw</code> is a fairly straightforward command line tool, although there are some GUIs available for it. This document will describe a few of the basic command line options. Note that <code>ufw</code> needs to be run with superuser privileges, so all commands are preceded with <code>sudo</code>. It is also possible to use the option <code>--dry-run</code> any <code>ufw</code> commands, which indicates the results of the command without actually making any changes.</p>
 <p>To enable the firewall, which will also ensure it starts up on boot, use:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ufw enable
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ufw enable
 </code></pre></div><p>To disable the firewall, and disable start up on boot, use:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ufw disable
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ufw disable
 </code></pre></div><p>Allow a particular port to have access (we have used port 22 in our example):</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ufw allow <span style="color:#ae81ff">22</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ufw allow <span style="color:#ae81ff">22</span>
 </code></pre></div><p>Denying access on a port is also very simple (again, we have used port 22 as an example):</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ufw deny <span style="color:#ae81ff">22</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ufw deny <span style="color:#ae81ff">22</span>
 </code></pre></div><p>You can also specify which service you are allowing or denying on a port. In this example, we are denying tcp on port 22:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ufw deny 22/tcp
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ufw deny 22/tcp
 </code></pre></div><p>You can specify the service even if you do not know which port it uses. This example allows the ssh service access through the firewall:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ufw allow ssh
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ufw allow ssh
 </code></pre></div><p>The status command lists all current settings for the firewall:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ufw status
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ufw status
 </code></pre></div><p>The rules can be quite complicated, allowing specific IP addresses to be blocked, specifying in which direction traffic is allowed, or limiting the number of attempts to connect, for example to help defeat a Denial of Service (DoS) attack. You can also specify the device rules are to be applied to (e.g. eth0, wlan0). Please refer to the <code>ufw</code> man page (<code>man ufw</code>) for full details, but here are some examples of more sophisticated commands.</p>
 <p>Limit login attempts on ssh port using tcp: this denies connection if an IP address has attempted to connect six or more times in the last 30 seconds:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ufw limit ssh/tcp
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ufw limit ssh/tcp
 </code></pre></div><p>Deny access to port 30 from IP address 192.168.2.1</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ufw deny from 192.168.2.1 port <span style="color:#ae81ff">30</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ufw deny from 192.168.2.1 port <span style="color:#ae81ff">30</span>
 </code></pre></div><h2 id="installing-fail2ban">Installing fail2ban</h2>
 <p>If you are using your Raspberry Pi as some sort of server, for example an <code>ssh</code> or a webserver, your firewall will have deliberate &lsquo;holes&rsquo; in it to let the server traffic through. In these cases, <a href="http://www.fail2ban.org">Fail2ban</a> can be useful. Fail2ban, written in Python, is a scanner that examines the log files produced by the Raspberry Pi, and checks them for suspicious activity. It catches things like multiple brute-force attempts to log in, and can inform any installed firewall to stop further login attempts from suspicious IP addresses. It saves you having to manually check log files for intrusion attempts and then update the firewall (via <code>iptables</code>) to prevent them.</p>
 <p>Install fail2ban using the following command:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt install fail2ban
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt install fail2ban
 </code></pre></div><p>On installation, Fail2ban creates a folder <code>/etc/fail2ban</code> in which there is a configuration file called <code>jail.conf</code>. This needs to be copied to <code>jail.local</code> to enable it. Inside this configuration file are a set of default options, together with options for checking specific services for abnormalities. Do the following to examine/change the rules that are used for <code>ssh</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 sudo nano /etc/fail2ban/jail.local
 </code></pre></div><p>Add the following section to the <code>jail.conf</code> file. On some versions of fail2ban this section may already exist, so update this pre-existing section it if it is there.</p>
 <pre><code>[ssh]
@@ -256,7 +250,7 @@ filter   = sshd
 logpath  = /var/log/auth.log
 maxretry = 6
 </code></pre><p>As you can see, this section is named ssh, is enabled, examines the ssh port, filters using the <code>sshd</code> parameters, parses the <code>/var/log/auth.log</code> for malicious activity, and allows six retries before the detection threshold is reached. Checking the default section, we can see that the default banning action is:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Default banning action (e.g. iptables, iptables-new,</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Default banning action (e.g. iptables, iptables-new,</span>
 <span style="color:#75715e"># iptables-multiport, shorewall, etc) It is used to define</span>
 <span style="color:#75715e"># action_* variables. Can be overridden globally or per</span>
 <span style="color:#75715e"># section within jail.local file</span>
@@ -403,6 +397,13 @@ bantime = -1
 
         <div class="pagination__buttons">
           
+            <span class="button previous">
+              <a href="https://dea.gl/posts/virtual-private-networks/">
+                <span class="button__icon">←</span>
+                <span class="button__text">Virtual Private Networks</span>
+              </a>
+            </span>
+          
 
           
             <span class="button next">
@@ -427,7 +428,7 @@ bantime = -1
                 <footer class="footer">
     <div class="footer__inner">
         <div class="footer__content">
-            <span>&copy; 2020</span>
+            <span>&copy; 2021</span>
             
                 <span><a href="https://dea.gl">Bryan Deagle</a></span>
             
@@ -447,7 +448,7 @@ bantime = -1
 
 
 
-<script type="text/javascript" src="https://dea.gl/bundle.min.dc716e9092c9820b77f96da294d0120aeeb189b5bcea9752309ebea27fd53bbe6b13cffb2aca8ecf32525647ceb7001f76091de4199ac5a3caa432c070247f5b.js" integrity="sha512-3HFukJLJggt3&#43;W2ilNASCu6xibW86pdSMJ6&#43;on/VO75rE8/7KsqOzzJSVkfOtwAfdgkd5BmaxaPKpDLAcCR/Ww=="></script>
+<script type="text/javascript" src="https://dea.gl/bundle.min.a0f363fdf81cdc5cfacc447a79c33189eb000d090336cd04aac8ee256f423b3133b836c281944c19c75e38d0b0b449f01ce5807e37798b7ac94ac1db51983fc4.js" integrity="sha512-oPNj/fgc3Fz6zER6ecMxiesADQkDNs0EqsjuJW9COzEzuDbCgZRMGcdeONCwtEnwHOWAfjd5i3rJSsHbUZg/xA=="></script>
 
 
 

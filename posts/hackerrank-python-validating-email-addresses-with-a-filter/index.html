@@ -46,16 +46,10 @@ Valid email addresses must follow these rules:
 <meta itemprop="name" content="Hackerrank Python: Validating Email Addresses with a Filter">
 <meta itemprop="description" content="Problem You are given an integer N followed by N email addresses. Your task is to print a list containing only valid email addresses in lexicographical order.
 Valid email addresses must follow these rules:
- It must have the username@websitename.extension format type. The username can only contain letters, digits, dashes and underscores. The website name can only have letters and digits. The maximum length of the extension is .  Concept A filter takes a function returning True or False and applies it to a sequence, returning a list of only those members of the sequence where the function returned True.">
-<meta itemprop="datePublished" content="2020-08-20T00:00:00+00:00" />
+ It must have the username@websitename.extension format type. The username can only contain letters, digits, dashes and underscores. The website name can only have letters and digits. The maximum length of the extension is .  Concept A filter takes a function returning True or False and applies it to a sequence, returning a list of only those members of the sequence where the function returned True."><meta itemprop="datePublished" content="2020-08-20T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2020-08-20T00:00:00+00:00" />
-<meta itemprop="wordCount" content="175">
-<meta itemprop="image" content="https://dea.gl"/>
-
-
-
+<meta itemprop="wordCount" content="175"><meta itemprop="image" content="https://dea.gl"/>
 <meta itemprop="keywords" content="python,hackerrank," />
-
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://dea.gl"/>
 
@@ -105,7 +99,7 @@ Valid email addresses must follow these rules:
         <span class="header__right">
             
                 <nav class="menu">
-    <ul class="menu__inner"><li><a href="https://dea.gl/about/">About</a></li><li><a href="https://dea.gl/categories/coding/">Coding</a></li><li><a href="https://dea.gl/categories/web/">Web</a></li>
+    <ul class="menu__inner"><li><a href="https://dea.gl/categories/coding/">Coding</a></li><li><a href="https://dea.gl/categories/web/">Web</a></li>
     </ul>
 </nav>
 
@@ -164,13 +158,13 @@ Valid email addresses must follow these rules:
 <h3 id="concept">Concept</h3>
 <p>A filter takes a function returning True or False and applies it to a sequence, returning a list of only those members of the sequence where the function returned True. A Lambda function can be used with filters.</p>
 <p>Let&rsquo;s say you have to make a list of the squares of integers from 0 to 9 (both included).</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;</span> l <span style="color:#f92672">=</span> list(range(<span style="color:#ae81ff">10</span>))
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;</span> l <span style="color:#f92672">=</span> list(range(<span style="color:#ae81ff">10</span>))
 <span style="color:#f92672">&gt;&gt;</span> l <span style="color:#f92672">=</span> list(map(<span style="color:#66d9ef">lambda</span> x:x<span style="color:#f92672">*</span>x, l))
 </code></pre></div><p>Now, you only require those elements that are greater than 10 but less than 80.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;</span> l <span style="color:#f92672">=</span> list(filter(<span style="color:#66d9ef">lambda</span> x: x <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">and</span> x <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">80</span>, l))
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;</span> l <span style="color:#f92672">=</span> list(filter(<span style="color:#66d9ef">lambda</span> x: x <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">and</span> x <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">80</span>, l))
 </code></pre></div><p>Easy, isn&rsquo;t it?</p>
 <h2 id="solution">Solution</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> re
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> re
 
 <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">fun</span>(s):
     <span style="color:#66d9ef">return</span> re<span style="color:#f92672">.</span>match(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;^[A-Za-z0-9\-_]+@[A-Za-z0-9]+\.[A-Za-z]{1,3}$&#39;</span>, s)
@@ -343,7 +337,7 @@ Valid email addresses must follow these rules:
                 <footer class="footer">
     <div class="footer__inner">
         <div class="footer__content">
-            <span>&copy; 2020</span>
+            <span>&copy; 2021</span>
             
                 <span><a href="https://dea.gl">Bryan Deagle</a></span>
             
@@ -363,7 +357,7 @@ Valid email addresses must follow these rules:
 
 
 
-<script type="text/javascript" src="https://dea.gl/bundle.min.dc716e9092c9820b77f96da294d0120aeeb189b5bcea9752309ebea27fd53bbe6b13cffb2aca8ecf32525647ceb7001f76091de4199ac5a3caa432c070247f5b.js" integrity="sha512-3HFukJLJggt3&#43;W2ilNASCu6xibW86pdSMJ6&#43;on/VO75rE8/7KsqOzzJSVkfOtwAfdgkd5BmaxaPKpDLAcCR/Ww=="></script>
+<script type="text/javascript" src="https://dea.gl/bundle.min.a0f363fdf81cdc5cfacc447a79c33189eb000d090336cd04aac8ee256f423b3133b836c281944c19c75e38d0b0b449f01ce5807e37798b7ac94ac1db51983fc4.js" integrity="sha512-oPNj/fgc3Fz6zER6ecMxiesADQkDNs0EqsjuJW9COzEzuDbCgZRMGcdeONCwtEnwHOWAfjd5i3rJSsHbUZg/xA=="></script>
 
 
 
